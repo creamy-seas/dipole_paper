@@ -1,0 +1,39 @@
+\section{Introduction}
+ \noindent Superconducting qubits are in the running for the devices of choice in scalable qunatum electronic platforms, paralleling the functionality of a transistor \cite{Astafiev2010}\cite{hoi2011}, multiplexer \cite{honigl2018} and serial bus \cite{shen2005}. They have a range of tuneable parameters, to fit the use-cases of different environments, can be built with industrial fabrication techniques and integrated at scale \cite{johnson2010}. 
+ 
+ That said, superconducting qubits are still victims of short coherence times: the transmon qubits in the revolutinary 5-qubit quantum experience from IBM $ \sim 60\,\mu $s (\href{http://www.research.ibm.com/ibm-q}{research.ibm.com/ibm-q}) \cite{linke2017}, compared to their trapped cavity counterparts $\sim1\, $ms \cite{monroe1995}. For a sufficient number of quantum logic operations pertaining to long computations ($ 10^{4} $) \cite{orlando1999}, coherence times need to surpass the $ 100\,\mu$s barrier.
+ 
+ A prominent decoherence process arises from charge noise, which drives the system's energy level flucuations and erratic evolution of the quantum state \cite{devoret2008}. Flux qubit architectures \cite{chiorescu2003}\cite{mooij1999} address this by making the energy of the Josephson junction the dominating energy term of the system, thereby decreasing the charge and increasing the flux sensitivities \cite{orlando1999}.
+
+Decoherence is a partial manifestation of fabrication accuracy and material properties. For example, the transmon has large capacitors, which strongly couple to the charge variations in the external environment. Correspondingly transmon has a low charge noise tolerance. Flux qubits have a higher tolerance to charge noise, but have the the tendency to erratically change the flux state when the superconducting loop is not uniform, allowing for random flux tunneling. We aim to reduce both effects through the new `dipole-qubit' design.
+
+
+ Flux qubit architectures have seen through developement to improve coherence times: quantronium $\sim500\,$ns \cite{cottet2002} \cite{gu2017}, shunted phase qubit $\sim10\,\mu $s \cite{stern2014} , shunted flux qubit $\sim80\,\mu$s \cite{yan2016} , 4-JJ \cite{qui2016}, fluxonium $\sim1\,$ms \cite{pop2014}. 
+ 
+% \cite{zhu2010}
+ We add to this list, by proporing a new `fff' qubit, consisting of two 3-JJ qubits, linked by a common $ \alpha-$JJ (Fig~\ref{fig:setup}). The device has two loops that can be flux biased
+ 
+  A similar system was stuied recently \cite{twin_flux_qubit}, where a chain of dipole qubits was used to control transmission of microwaves. In this work we deal with a single dipole qubit devoid of any collective phenomena, looking at it as a stand alone system.
+ 
+ Results showed that the transition energy $ \omega_{21} $ had a much weaker flux dependence that a regular qubit.	
+ 
+ States of the qubits are set by the fluxes through two SQUID loops. In such a configuration one can realise both symmetric and asymmetric flux bias of the device. Topologically it is a "dipole" type qubit. It is a stand alone system, which can be coupled to the transmission line or resonator. 
+
+In the current work we experimentaly study operation of the qubit when coupled capacitively to the transmisson line.  The evolution of three lowest energy states is well described by Lagrangian formalism, including the case of assymetrical bias.   
+ 
+\begin{itemize}
+	\item The qubit is ound to be very stable against flux noise, even with strong coupling to the transmission line.
+	\item When biased to the degeneracy point, the qubit has a low deoherence rate $ \Gamma_1 $ \red{$ \sim XXX$}.
+	\item Symmerty means we apply same magnetic field to both loops, and hence a equilibrated bias from both sides;
+	\item Tuning the magnetic field, we tune the coupling strength through the capacitor. This is because we change the ground state of the system, and hence the charge distribution and dipole moment of the system. 
+	\item Strongly anharmonic
+	\item Our dipole qubit is situated in an open 1D space, and acts as a balanced flux qubit. The system demonstrates strong coupling to the line and boasts a robust decoherence time \red{(abstract)}. We characterise qualitatively the spectrum and coupling performace.
+\end{itemize}
+
+ 
+ \red{\%\%\% dump}
+ Qubits with low charge sensitivity such as the 0-$ \pi $ \cite{pi0_2006} and the fluxonium \cite{fluxonium_2009}, where the large impedance of the circuit, $ Z = \sqrt{L/C} $ localises charge below the single CP limit.
+ 
+ One can reduce the effect of flux fluctuations by designing 'symmetrical' geometry of the qubit loop, which 'compensates' the flux.  The most vanilla version, would be to mirror the loop of a flux qubit \includeref{mooij qubit paper} about one of the alpha josephson junction, named alpha JJ, see Fig. \includeref{image with diagram}. The Hamiltonian of such a system reads:
+  
+ The energy states correspond to current states cicrulating the loop in clockwise of anticlockwise directions. Due to symmetrical flux biasing of the two loops, no current passes the middle junction. Which corresponds to \ra $ \phi_\pi = 0 \text{ or } \pi $. As a result, there will be two distinct ground states with different transmission characteristics \includeref{explain this in relation to dipole paper}.
