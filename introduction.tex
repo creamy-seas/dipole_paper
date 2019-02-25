@@ -1,0 +1,39 @@
+% -*- TeX-master: "../dipole_ilya_paper.tex" -*-
+
+\section{Introduction}
+% A quantum electronic platform that parallels the functionality of a transistor \cite{Astafiev2010}\cite{hoi2011}, multiplexer
+% \cite{honigl2018} and serial bus \cite{shen2005} will server as an intergral part of commercialisation of quantum computing
+% power. Superconducting quibts are one of the device sof choice
+ 
+\noindent Superconducting qubits are in progressive development to house quantum electronic platforms, having already paralleled
+the functionality of a transistor \cite{Astafiev2010}\cite{hoi2011}, multiplexer \cite{honigl2018} and serial bus
+\cite{shen2005}. One can tune their operating frequencies, sensitivity to external perturbations and transition rate to fit the
+use-cases of different environments. They can be built using industry standard fabrication techniques and integrated at scale into
+large coherent circuits \cite{johnson2010}.
+% at scale
+ 
+One of the inherent limitations superconducting qubits face is their comparatively short coherence time: the transmon qubits in
+the revolutinary 5-qubit quantum experience from IBM have a coherence time $ \sim 60\,\mu $s
+(\href{http://www.research.ibm.com/ibm-q}{research.ibm.com/ibm-q}) \cite{linke2017}. In contrast, 20 years ago qubits on trapped
+$ ^{+} $Be$ ^{9} $ ions where alredy operating with a coherence time $\sim1\, $ms \cite{monroe1995}. Such decoherence is a result of
+the large capacitive elements in these macroscopic structures, loops features often are of the order of
+$1\,\mu\text{m}$\cite{Astafiev2010}\cite{hoi2011}\cite{johnson2010}, coupling strongly to charge variations in the external environment. This %fluctuates
+affects the qubit's energy levels, leading to erratic evolution of the quantum state \cite{devoret2008}. For a sufficient number
+of quantum logic operations pertaining to long computations, $ 10^{4} $, coherence times need to surpass the $ 100\,\mu$s barrier
+\cite{orlando1999}.
+ 
+Flux qubit architectures were developed to address this problem by making Josephson junction energy dominant over the charging
+energy and thus lowering the device's charge sensitivity \cite{orlando1999}\cite{chiorescu2003}\cite{mooij1999}. Branching of
+architectures in this direction has lead to improved coherence times: quantronium $\sim500\,$ns \cite{cottet2002} \cite{gu2017},
+shunted phase qubit $\sim10\,\mu $s \cite{stern2014} , shunted flux qubit $\sim80\,\mu$s \cite{yan2016} , 4-JJ \cite{qui2016}, fluxonium $\sim1\,$ms \cite{pop2014}.
+ 
+We study a new `twin' qubit, consisting of two flux qubits, linked by a common $ \alpha-$JJ (Fig.~\ref{fig:setup}). A chain from 15 such
+qubits was recently placed into a coplanar waveguide that demonstrated flux-tunable transmission \cite{shulga2018}. Results showed
+a weak flux dependence of the transition energy when the chain was biased to the degeneracy point, pointing to an operational
+regime of a superconducting qubit with both low flux and charge sensitivities.
+ 
+In this work we isolate one of these twin qubits and provide experimental and theoretical evidence for: strong anharmonicity of
+the system with respect to the \iket{1}\lra\iket{2} and \iket{2}\lra\iket{3} transitions; weak flux dependence of the transition
+energies at the degeneracy bias $\sim \frac{1}{2}\Phi_0 = \frac{h}{4e}$, with a decoherence rate
+$ \tau_\text{decoherence} = \frac{2\pi}{\Gamma}= 42\, \text{ns} $; tuneable capacitive coupling to the tranmission line, resulting from a
+flux-tuneable dipole moment.

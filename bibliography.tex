@@ -1,3 +1,5 @@
+% -*- TeX-master: "../dipole_ilya_paper.tex" -*-
+
 \begin{thebibliography}{99}
 
 \bibitem{Astafiev2010}
@@ -71,7 +73,7 @@ Devitt, Simon J., Phys. Rev. A, {94}, {032329} (2016)
 \bibitem{phase}
  Using the commutation relation for conjugate number and phase operators $ \left[\hat{n},\hat{\phi}\right] = 1 $, evaluate
  
-{\scriptsize\begin{equation}\label{key}
+{\scriptsize\begin{equation}\label{eq:ab1}
  \begin{aligned}
  \icommutation{\hat{\red{n}}}{e^{\pm i \hat{\blue{\phi}}}} & =  \icommutation{\hat{n}}{\sum_{\alpha = 0}^{\infty} \frac{(\pm i\hat{\blue{\phi}})^\alpha}{\alpha!}} = \sum_{\alpha = 0}^{\infty} (\pm i)^\alpha\frac{\icommutation{\hat{\red{n}}}{\hat{\blue{\phi}}^\alpha}}{\alpha!}\\
  & = \sum_{\alpha = 0}^{\infty} (\pm i)^\alpha\frac{-\alpha i\hat{\blue{\phi}}^{\alpha - 1}}{\alpha!} = 
@@ -86,7 +88,7 @@ Devitt, Simon J., Phys. Rev. A, {94}, {032329} (2016)
  
  \vspace{-1em}
  
-{\scriptsize \begin{equation}\label{key} 
+{\scriptsize \begin{equation}\label{eq:ab2} 
 \hat{\red{n}}\bigg[e^{\pm i\hat{\blue{\phi}}}\ket{n}\bigg] = \bigg[\pm e^{\pm i\hat{\blue{\phi}}} + e^{\pm i\hat{\blue{\phi}}}\hat{n}\bigg]\ket{n} =
  (n\pm 1)\bigg[e^{\pm i\hat{\blue{\phi}}}\ket{n}\bigg]
 \end{equation}}
@@ -97,7 +99,7 @@ and making $ e^{i\phi} $ unitary
 
 \vspace{-0.2em}
 
-{\scriptsize \begin{equation}\label{key}
+{\scriptsize \begin{equation}\label{eq:ab3}
 	e^{\pm i\hat{\blue{\phi}}}\ket{n} = \ket{n \pm 1}.
 \end{equation}}
 
@@ -113,3 +115,7 @@ and making $ e^{i\phi} $ unitary
 
 
 \end{thebibliography}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../dipole_ilya_paper"
+%%% End:
