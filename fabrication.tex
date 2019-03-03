@@ -2,28 +2,38 @@
 \section{Fabrication}
 
 \begin{figure}[h]
-  \includegraphics[height=10.5cm]{figure1_v2}
-  \caption{\small Geometry of a twin qubit: a) Scanning electron microscope (SEM) image of the qubit flux biases $ \Phi $,
-    $ \eta\Phi $ applied to it's superconducting loops. The qubit has a macroscopic size $ \sim 20\,\mu $m coupled to a microwave line with
-    T-shaped capacitors (inset); b) The central junction has an energy of $ \alpha E_{J}$ capacitance $\alpha C$ relative to the outside
-    JJs.}
-    \label{fig:setup}
-  % \caption{\small{Scanning electron microscope image of the dipole
-  % qubits capacitively coupled to the tranmisssion line. A common
-  % flux $ \Phi $ is applied to each loop with an external magnetic
-  % field. This magnetic field effects the phases induced across the
-  % junction$ \varphi_i$ .} Phases will arange is such a way, so that
-  % potential energy is minimised}
+  \includegraphics[height=10.5cm]{figure1_v3}
+  \caption{\small Geometry of a twin qubit: a) Scanning electron microscope image of the qubit
+    flux with phase biases $ \varphi $, $ \eta\varphi $ applied to it's superconducting loops. The repeated line
+    structures are the byproduct of the double-angle evaporation of aluminum that creates the
+    Al-AlO$_x$-Al JJs highlighted in red and pink. The qubit is coupled to the microwave line
+    with a T-shaped capacitor (inset); b) The twin qubit is a symmetrical arrangement of two
+    individual flux qubits. The central junction has an energy and capacitance of
+    $ \alpha E_{J}$, $\alpha C$ compared with the outside values of E$_J$C$_J$.}
+  \label{fig:setup}
 \end{figure}
 
 %% Describe fabrication
-\noindent The qubit is fabricated on undoped silicon. It is coupled to a coplanar transmission line, with an impedance of
-$ Z_{0} \approxeq 50\,\Omega $, which passes through to an opening in the center of the chip. Twin qubits and T-shaped coupling capacitors are
-fabricated simultaneously using the shadow evaporation technique \includeref{paper on shadow evaporation} of aluminum with
-intermediate oxidation. These steps result in a 5-JJ structure of Fig.~\ref{fig:setup}. Measurements were performed in a 14\,mK
-environment to suppress thermal activation. The micrwoave signals were delivered to the qubit via a single transmission line.
+\noindent The sample is fabricated on undoped silicon. A coplanar transmission line (impedance
+$ Z_{0} \sim 50\,\Omega $) is run to an opening between the ground planes in the center of the
+chip. Twin qubits and T-shaped capacitors coupling the qubits to the transmission line are
+fabricated simultaneously using the shadow evaporation technique of aluminum
+\cite{wu2013}. These steps result in a 5-JJ structure of Fig.~\ref{fig:setup}. Measurements
+are performed in a 14\,mK environment of a dilution refrigerator to suppress thermal
+activation of GHz frequency transitions.  All microwave signals probing the system pass
+through a single transmission line that is equipped with attenuators on the input side, and
+circulators and low noise amplifiers on the output side. This facilitates power conversion
+between the laboratory equipment and qubit microwaves.
 
-%% Explain how other new qubits have been fabricated with grooves and HF - this is down the line for this type of geometry
+Our pilot experiment did not to go to the depths of using chemical and physical
+treatment of the substrate surface to remove two-level system defects in the silicon oxide layer \cite{earnest2018} or employing multi-stage shielding to eliminate stray infrared light during
+measurement \cite{barends2011}. These improvements will be incorporated in the further development cycles of the twin qubit to build upon the demonstrated decoherence properties.
+
+
+
+
+%% Explain how other new qubits have been fabricated with grooves and HF - this is down the
+%% line for this type of geometry
 
 %%% Local Variables:
 %%% mode: latex
