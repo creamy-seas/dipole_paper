@@ -1,35 +1,79 @@
 % -*- TeX-master: "../dipole_ilya_paper.tex" -*-
 
 \section{Introduction}
-% A quantum electronic platform that parallels the functionality of a transistor
+% A quantum electronic platform that  parallels the functionality of a transistor
 % \cite{Astafiev2010}\cite{hoi2011}, multiplexer \cite{honigl2018} and serial bus
-% \cite{shen2005} will server as an intergral part of commercialisation of quantum computing
-% power. Superconducting quibts are one of the device sof choice
- 
-\noindent Over the past decade superconducting qubits have successfully paralleled the
-functionality of a transistor \cite{Astafiev2010}\cite{hoi2011}, multiplexer \cite{honigl2018}
-and serial bus \cite{shen2005}. Being nothing more than strips of aluminum on a chip, their
-geometry can be designed to select an operating energy, state transition rates and
-sensitivity that would fit the use-case of very specific environments. They can then be mass
-produced using industry standard fabrication techniques and integrated at scale into large
-coherent circuits \cite{johnson2010}. This all speaks to their strong case of servicing
-future quantum electronic platforms.
+% \cite{shen2005}  will  server as  an  intergral  part of  commercialisation  of
+% quantum  computing power.   Superconducting quibts  are one  of the  device sof
+% choice
+
+Superconducting  qubits are  one of  the promising  traods for  implementation of
+quantum computing  technololgy. Being nothing more  than strips of aluminum  on a
+chip,  their geometry  can  be  designed to  select  an  operating energy,  state
+transition rates  and sensitivity that  would fit  the use-case of  very specific
+environments.
+
+\noindent Over the past decade they have  been carried out the functionality of a
+transistor  \cite{Astafiev2010}\cite{hoi2011}, multiplexer  \cite{honigl2018} and
+serial bus \cite{shen2005}.
+% Being nothing more than strips of aluminum on a chip,
+their geometry  can be designed to  select an operating energy,  state transition
+rates   and  sensitivity   that  would   fit  the   use-case  of   very  specific
+environments. They can then be  mass produced using industry standard fabrication
+techniques   and    integrated   at   scale   into    large   coherent   circuits
+\cite{johnson2010}.  This  all speaks  to their strong  case of  servicing future
+quantum electronic platforms.
 
 
-One of the inherent limitations superconducting qubits still face are their comparatively short coherence times, $\tau_{\text{dec}}$. Over this period the $\rho_{01}$ and $\rho_{10}$ components of the system's density matrix, $\rho = \ensuremath{\left(\begin{smallmatrix} \rho_{00} & \rho_{01} \\ \rho_{10} & \rho_{11} \end{smallmatrix}\right)} $, decay to zero and computational information becomes lost \cite{phaseExp}.
-For example, the transmon qubits in the revolutionary 5-qubit quantum experience from IBM (\href{http://www.research.ibm.com/ibm-q}{research.ibm.com/ibm-q}) have a coherence time of $ \sim 60\,\mu $s \cite{linke2017}. In contrast, 20 years ago qubits on trapped $ ^{+} $Be$ ^{9} $ ions already had a coherence time of $\sim1\, $ms \cite{monroe1995}.
-Such strong decoherence in superconducting qubits is a consequence of the large capacitances of their macroscopic sized structures (loop features can often be $ 1\iunitMixed{\mu}{m}$ or greater in size \cite{Astafiev2010}\cite{hoi2011}\cite{johnson2010}), coupling strongly to charge variations in the external environment.
-This fluctuates the qubit's energy levels, leading to an erratic evolution of the quantum state that `averages' out information on the off-diagonal elements \cite{devoret2008}. To house a sufficient number of quantum logic operations for multi-stage computations ($ 10^4 $) coherence times need to surpass the $ 100\,\mu$s barrier
+One  of the  inherent limitations  superconducting  qubits still  face are  their
+comparatively  short coherence  times,  $\tau_{\text{dec}}$.  Over  this period  the
+$\rho_{01}$   and   $\rho_{10}$   components    of   the   system's   density   matrix,
+$\rho  =   \ensuremath{\left(\begin{smallmatrix}  \rho_{00}   &  \rho_{01}  \\   \rho_{10}  &
+      \rho_{11}  \end{smallmatrix}\right)}  $,  decay   to  zero  and  computational
+information becomes  lost \cite{phaseExp}.  For  example, the transmon  qubits in
+the      revolutionary     5-qubit      quantum      experience     from      IBM
+(\href{http://www.research.ibm.com/ibm-q}{research.ibm.com/ibm-q})     have     a
+coherence time of $ \sim 60\,\mu $s \cite{linke2017}. In contrast, 20 years ago qubits
+on trapped  $ ^{+} $Be$  ^{9} $ ions  already had a  coherence time of  $\sim1\, $ms
+\cite{monroe1995}.   Such  strong  decoherence  in superconducting  qubits  is  a
+consequence of the large capacitances of their macroscopic sized structures (loop
+features   can   often   be   $    1\iunitMixed{\mu}{m}$   or   greater   in   size
+\cite{Astafiev2010}\cite{hoi2011}\cite{johnson2010}), coupling strongly to charge
+variations  in the  external  environment.  This  fluctuates  the qubit's  energy
+levels, leading to an erratic evolution  of the quantum state that `averages' out
+information  on  the  off-diagonal   elements  \cite{devoret2008}.   To  house  a
+sufficient  number  of  quantum  logic operations  for  multi-stage  computations
+($  10^4   $)  coherence   times  need   to  surpass   the  $   100\,\mu$s  barrier
 \cite{orlando1999}.
  
-Flux qubit architectures were developed to address this decoherence problem by making the energy of their Josephson junctions (JJ) dominant in the system, which lowered the device's charge sensitivity purely by nature of suppressing the relative size of any charge-related energy fluctuations  \cite{orlando1999}\cite{chiorescu2003}\cite{mooij1999}. The further branching of flux qubit architectures has lead to improved coherence times: quantronium $\sim500\,$ns \cite{cottet2002} \cite{gu2017}, shunted phase qubit $\sim10\,\mu $s \cite{stern2014} , shunted flux qubit $\sim80\,\mu$s \cite{yan2016} , 4-JJ \cite{qui2016}, fluxonium $\sim1\,$ms \cite{pop2014}.
+Flux qubit  architectures were developed  to address this decoherence  problem by
+making the energy of their Josephson junctions (JJ) dominant in the system, which
+lowered  the device's  charge sensitivity  purely  by nature  of suppressing  the
+relative     size      of     any     charge-related      energy     fluctuations
+\cite{orlando1999}\cite{chiorescu2003}\cite{mooij1999}.  The further branching of
+flux  qubit   designs  has   lead  to   improved  coherence   times:  quantronium
+$\sim500\,$ns     \cite{cottet2002}    \cite{gu2017},     shunted    phase     qubit
+$\sim10\,\mu $s \cite{stern2014} , shunted  flux qubit $\sim80\,\mu$s \cite{yan2016} , 4-JJ
+\cite{qui2016}, fluxonium $\sim1\,$ms \cite{pop2014}.
  
-This list is extended with a new `twin' qubit, consisting of two symmetrical flux qubits, linked by a common $ \alpha-$JJ (Fig.~\ref{fig:setup}). A chain of 15 such qubits was recently placed into a coplanar
-waveguide to demonstrate flux-tunable transmission of microwaves \cite{shulga2018}. Of particular interest to us was the weak flux dependence of the chain's transition energy when it was biased to the degeneracy point $\frac{1}{2}\Phi_0 $ pointing to an operational regime which would benefit from both low flux and charge sensitivities.
+This list  is extended with  a `twin' qubit,  consisting of two  symmetrical flux
+qubits, linked  by a common $  \alpha-$JJ (Fig.~\ref{fig:setup}).  A chain  of 15 such
+qubits was recently placed into  a coplanar waveguide to demonstrate flux-tunable
+transmission of  microwaves \cite{shulga2018}. Of  particular interest to  us was
+the weak flux dependence  of the chain's transition energy when  it was biased to
+the degeneracy  point $\frac{1}{2}\Phi_0 $  pointing to an operational  regime which
+would benefit from both low flux and charge sensitivities.
  
-In this work we isolate one of these twin qubits and provide experimental evidence for: strong anharmonicity of the system with respect to the \iket{1}\ilra\iket{2} and
-\iket{2}\ilra\iket{3} transitions; weak flux dependence of the transition energies at the
-degeneracy bias $\sim \frac{1}{2}\Phi_0 = \frac{h}{4e}$, with a decoherence rate
-$ \tau_\text{decoherence} = 42\, \text{ns} $; simulation of the \iket{1}~\ilra~\iket{2} transition rate.
+In  this work  we  isolate one  of  these twin  qubits  and provide  experimental
+evidence  for:   strong  anharmonicity  of   the  system  with  respect   to  the
+\iket{1}\ilra\iket{2} and \iket{2}\ilra\iket{3} transitions; weak flux dependence
+of      the     transition      energies     at      the     degeneracy      bias
+$\sim    \frac{1}{2}\Phi_0     =    \frac{h}{4e}$,    with    a     decoherence    rate
+$    \tau_\text{decoherence}   =    42\,    \text{ns}   $;    simulation   of    the
+\iket{1}~\ilra~\iket{2} transition rate.
 
-% tuneable capacitive coupling to the tranmission line, resulting from a flux-tuneable dipole moment.
+The goal  of the  experiment is  to study the  energy structure,  compliance with
+simulations and check controllability.
+
+% tuneable  capacitive  coupling  to  the  tranmission  line,  resulting  from  a
+% flux-tuneable dipole moment.
