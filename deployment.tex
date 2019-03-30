@@ -103,21 +103,29 @@ from the SEM image in Fig.~\ref{fig:setup}.
  
  \begin{figure}[h!]
    \includegraphics[height = 5cm]{figure5}
-   \caption{Rabi oscillation measurements are taken at the degeneracy flux bias, $ \Phi_0/2 $, by
-     driving the qubit with resonant microwaves,  $\omega_{\text{VNA}} = \omega_{21}$ for different time
-     periods,  $ dt  $,  and monitoring  the  signal in  the output  line  \cite{rabi}. The  a
-     decoherence  time of  $ T_\varphi  = \iunit{42}{ns}  $ is  extracted from  the decay  envelope,
+   \caption{Rabi oscillation taken  at the degeneracy point,  $ \Phi_0/2 $, by  driving the qubit
+     with  resonant  microwaves,  $\omega_{\text{VNA}}  =   \omega_{21}$  for  different  time  periods,
+     $ dt $, and monitoring the signal in  the output line \cite{rabi}. The a decoherence time
+     of  $  \tau_{\text{dec}}   =  \iunit{42}{ns}  $  is  extracted  from   the  decay  envelope,
      $ e^{-dt/\tau_\varphi} $, of the the oscillations. \label{fig:rabi}}
  \end{figure}
 
- At the  degeneracy flux bias $  \Phi = (n +  \frac{1}{2})\Phi_0, n\in\mathbb{Z} $, the  energy levels
- posses a low  curvature of $ -550\pm10\,\text{GHz}/\Phi_0^2 $. It  is substantially smaller than
- $   13\times   10^4$   $   \text{GHz}/\Phi_0^2$    on   the   4-JJ   flux   qubit   \cite{stern2014},
- $ 8.4 \times  10^4$ \cite{zhu2010} and $ 37\times 10^{4}$  $ \text{GHz}/\Phi_0^2$ \cite{gustavsson2012} on
- the  3-JJ flux  qubits demonstrated  recently.   This improved  robustness to  flux noise  is
- matched by a decoherence  time of $ \tau_\phi = \iunit{42}{ns} $,  extracted from Rabi oscillations
- in  Fig.~\ref{fig:rabi} \cite{rabi}.   Given  that  the qubit  was  not  fabricated with  the
- technological advancements discussed above, this is a good initial value to start work on.
+ An important qubit parameter  is the curvature at the turning points  in the energy spectrum,
+ where qubit operations are carried out. A low  curvature is desirable, to make the qubit less
+ sensitive  to external  flux changes,  which  would improve  decoherence time.   At the  twin
+ qubits'  degeneracy point  $ \Phi  =  (n +  \frac{1}{2})\Phi_0,  n\in\mathbb{Z} $,  the curvature  is
+ $   -550\pm10\,\text{GHz}/\Phi_0^2  $.    It  is   substantially  smaller   than  $   13\times  10^4$
+ $ \text{GHz}/\Phi_0^2$ on the 4-JJ flux qubit \cite{stern2014}, $ 8.4 \times 10^4$ \cite{zhu2010} and
+ $ 37\times 10^{4}$ $ \text{GHz}/\Phi_0^2$ \cite{gustavsson2012}  on the 3-JJ flux qubits demonstrated
+ recently.   The  decoherence   time  in  our  qubits  was  however   relatively  small,  only
+ $  \tau_\text{dec}  =  \iunit{42}{ns}  $.   We   get  $\tau_\text{dc}$  from  measurement  of  Rabi
+ oscillations,  see Fig.~\ref{fig:rabi}  \cite{rabi}.  We  explain  this by  poisoning of  the
+ sample  with  infrared radiation,  and  simplified  technology  used  for fabrication  as  we
+ mentioned above.
+
+ Despite the twin  qubit have a much the  decoherence time in our qubits  was relatively small
+ This improved robustness to  flux noise is matched by a decoherence time  of , extracted from
+ Rabi oscillations in Fig.~\ref{fig:rabi} \cite{rabi}.
 
 %%% Local Variables:
 %%% mode: latex
