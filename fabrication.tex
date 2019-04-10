@@ -2,49 +2,58 @@
 \section{Fabrication}
 % \red{natural to couple capacitively} \red{Thickness of aluminium size of chip }
 
-% \red{Glued to a pcb  and bonded with gold wires, connectio  input and output to
-% coax lines.}
+% \red{Glued to a pcb and bonded with gold wires, connectio input and output to coax lines.}
 
 \begin{figure}[h]
   \includegraphics[height=10.5cm]{figure1_v3}
-  \caption{\small Geometry of a twin qubit: a) Scanning electron microscope image
-    of  the  qubit flux  with  phase  biases  $ \varphi  $,  $  \eta\varphi  $ applied  to  it's
-    superconducting loops. The repeated line  structures are the byproduct of the
-    double-angle  evaporation  of aluminum  that  creates  the Al-AlO$_x$-Al  JJs
-    highlighted in red and pink. The qubit  is coupled to the microwave line with
-    a T-shaped capacitor (inset); b) The  twin qubit is a symmetrical arrangement
-    of  two individual  flux  qubits.  The  central junction  has  an energy  and
-    capacitance  of  $ \alpha  E_{J}$,  $\alpha  C$ compared  with  the  outside values  of
-    E$_J$C$_J$.}
+  \caption{\small \textbf{Geometry of a twin qubit.}  a) Scanning electron microscope image of
+    the qubit flux with phase biases $ \varphi $,  $ \eta\varphi $ applied to it's superconducting loops. The
+    repeated line  structures are the  byproduct of  the double-angle evaporation  of aluminum
+    that creates the  Al-AlO$_x$-Al JJs highlighted in  red and pink. The qubit  is coupled to
+    the microwave line with  a T-shaped capacitor (inset); b) The twin  qubit is a symmetrical
+    arrangement  of two  individual  flux qubits.   The  central junction  has  an energy  and
+    capacitance of $ \alpha E_{J}$, $\alpha C$ compared with the outside values of E$_J$C$_J$.}
   \label{fig:setup}
 \end{figure}
 
 %% Describe fabrication
-\noindent The qubit  is fabricated on the undoped silicon  substrate.  A coplanar
-transmission line with impedance  $ Z_{0} \sim 50\,\Omega $ is run  to an opening between
-the  ground planes  in the  center of  the chip,  see Fig~\ref{fig:setup}.   Twin
-qubits  and T-shaped  capacitors coupling  qubits  to the  transmission line  are
-fabricated  simultaneously using  the  shadow evaporation  technique of  aluminum
-\cite{wu2013}.  These steps  result in a 5-JJ  structure of Fig.~\ref{fig:setup},
-each JJ with 2 squares and  an area of \iunit{200\times200}{nm$^2$}.  Measurements are
-performed in  a 14\,mK  environment of  a dilution  refrigerator so  that thermal
-activation of  GHz frequency transitions  are suppressed.  All  microwave signals
-probing  the system  pass  through a  single transmission  line  equipped with  a
-standard set  of attenuators  on the  input side, and  circulators and  low noise
-amplifiers on  the output  side.  This facilitates  power conversion  between the
-laboratory equipment and qubit microwaves.
+\noindent The qubits and transmission line are fabricated on an undoped 100 silicon substrate,
+which is pre-patterned with  10\,nm NiCr\,-\,90\,nm Au ground planes and  markers. We begin by
+cleaning the  wafer for $\sim$~10 minutes  at 60\,C in  acetone rinsing in de-ionized  water. Two
+layers of electron resist are sequentially spun  and post baked (3\,minutes at 60\,C) onto the
+wafer:  {Copolymer 13\%},  700\,nm;  ZEP520a:Anisol  2:1, 60\,nm.   We  use  an electron  beam
+lithographer  to  expose  the  resist  using  a 30\,kV,  10\,pA  beam  delivering  a  dose  of
+$ 70\,\mu $C/cm$^2$. We develop the pattern in Pylxylen for 35\,seconds followed by a 10\,minute
+submersion in Isopropanol:H$_2$0 93:7 and rinse in Isopropanol. Shadow evaporation of aluminum
+in a Plassys \cite{wu2013} simultaneously deposits the JJ and transmission line structures. We
+first  use  \red{argon  etching} to  remove  oxide  layers  for  good galvanic  contact,  and,
+maintaining high vacuum, we  deposit 20\,nm of Al and perform static  oxidation for 10 minutes
+at 0.3\,mBar  to generate the  intermediate AlO$_x$ insulating barrier  for the JJ.   A second
+30\,nm layer of Al completes the process.
 
-Our pilot experiment did  not to go to the depths of  using chemical and physical
-treatment of  the substrate  surface to  remove two-level  system defects  in the
-silicon  oxide layer  \cite{earnest2018}  or employing  multi-stage shielding  to
-eliminate stray infrared light during measurement \cite{barends2011}.  We plan on
-doing these improvements in further development cycles of the twin qubit.
-
+These steps  give us the 5-JJ  structure of the  twin qubits and T-shaped  capacitors coupling
+them  to  the  transmission  line,  see  Fig.~\ref{fig:setup}.  Each  JJ  has  an  a  area  of
+\iunit{400\times200}{nm$^2$}.      The     coplanar     transmission    line     with     impedance
+$ Z_{0} \sim 50\,\Omega $ runs to the opening between the ground planes in the center of the chip.
 
 
+We  bond the  sample  chip  to a  printed  circuit board  and  mount it  on  a  holder with  a
+niobium-coil magnet on the  13\,mK stage of a dilution refrigerator. A metal  cover is used to
+shield the holder  from stray magnetic fields,  while attenuators, -50\,dBm on  the 50K stage,
+-30\,dBm on  the 4\,K stage,  thermalize the input lines  to the respective  temperatures.  We
+attach a  4\,K stage circulator on  the output line for  isolation, and amplify the  signal by
++35\,dBm on  the 4K stage and  +35\,dBm at room  temperature.  This system of  attenuators and
+amplifiers  facilitate   power  conversion   between  the   laboratory  equipment   and  qubit
+microwaves. We surround each  temperature stage of the system with a case,  wrapping it like a
+Russian doll, that thermally shield from  higher stages.  Prior to performing characterization
+measurement, we took the microwave transmission spectrum with the qubit detuned, and corrected
+all further measurements by this background transmission profile.
 
-%% Explain how other new  qubits have been fabricated with grooves  and HF - this
-%% is down the line for this type of geometry
+Our pilot experiment did  not to go to the depths of using  chemical and physical treatment of
+the  substrate  surface  to  remove  two-level  system defects  in  the  silicon  oxide  layer
+\cite{earnest2018} or employing infra-red filters  to eliminate stray light during measurement
+\cite{barends2011}.  We plan on doing these  improvements in further development cycles of the
+twin qubit.
 
 %%% Local Variables:
 %%% mode: latex
