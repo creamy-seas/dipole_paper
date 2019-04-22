@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%kbordermatrix             MUSE              BE             PLACED             IN
+% /usr/local/texlive/2016/texmf-dist/tex/latex/base and then  run sudo -s texhash
+% to load it up
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Document options
+\documentclass[a4paper,12pt]{article} %document class
+\usepackage{cmap} %make pdf searchable
+
+%%% Geometry
+\usepackage{geometry}          \geometry{top=25mm}         \geometry{bottom=35mm}
+\geometry{left=30mm} \geometry{right=20mm}
+
+%%% Headers
+% \usepackage{fancyhdr}\pagestyle{fancy}
+% \renewcommand{\headrulewidth}{0pt} % line thickness for top nots
+% \lfoot{}   \rfoot{}   \rhead{Chapter  \Alph{section}}   \chead{\roman{section}}
+% \lhead{\roman{section}} \cfoot{} %page number by defaults
+
+%%% Linespacing
+\usepackage{setspace}
+% \onehalfspacing \doublespacing \singlespacing
+
+%%% Specific packages
+\usepackage[qm]{qcircuit} %for quantum circuits
+\usepackage{braket} %for the \Bra and \Ket
+\usepackage{kbordermatrix} % label matrix rows and columns <--------------------
+\usepackage{transparent} %for transparent options
+\usepackage{etoolbox} %logical operators
+\usepackage{multicol} %multicolumn in itemize mode
+\usepackage{mathdots} %for udots <--------------------
+
+%%% Common packages
+\usepackage{graphicx} %for images
+\usepackage{caption}                                \usepackage[makeroom]{cancel}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} %ams package, for fonts, symbols
+\usepackage{comma} %smart comma spacing in formulas e.g. $0,3$ is number $0, 3$ list
+\usepackage{url} %addition of url in bibliogrpahy
+\usepackage{hyperref} \usepackage{multirow} %merge rows
+\usepackage{framed} %adds a frame box
+\usepackage{color} %colour
+\usepackage{lastpage} %total pages in document
+\relpenalty=9999 %prevent splitting of equations
+\binoppenalty=9999
+\mathtoolsset{showonlyrefs=true} %only label formulas with refferences
+
+%%% Hyperreferences
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor} \hypersetup{
+  %%% Document info
+  unicode=true,    pdftitle={},    pdfauthor={Ilya    Antonov},    pdfsubject={},
+  pdfcreator={Ilya Antonov}, pdfkeywords={} {} {},
+  colorlinks=true, % false: ссылки в рамках; true: цветные ссылки
+  linkcolor=black, %internal links
+  citecolor=blue, %bib links
+  filecolor=magenta, %file links
+  urlcolor=cyan %url links
+}
+
+\usepackage[backend=biber]{biblatex}

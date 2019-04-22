@@ -1,0 +1,117 @@
+\newcommand{\iunit}[2]{\ensuremath{#1\,\text{#2}}}
+
+\newcommand{\iunitMixed}[3]{\ensuremath{#1\,#2\text{#3}}}
+
+\newcommand{\iket}[1]{\ensuremath{\Ket{#1}}}
+
+\newcommand{\ibra}[1]{\ensuremath{\Bra{#1}}}
+
+\newcommand{\iketbra}[2]{%
+  \ket{#1}\bra{#2}%
+}
+
+\newcommand{\ira}{\ensuremath{\,\rightarrow\,}}
+
+\newcommand{\ilra}{\ensuremath{\,\leftrightarrow\,}}
+
+\newcommand{\iratext}[1]{\ensuremath{\,\xrightarrow{\text{#1}}\,}}
+
+\newcommand{\iabsSquared}[1]{\ensuremath{\left|#1\right|^2}}
+
+\newcommand{\iabs}[1]{\ensuremath{\left|#1\right|}}
+
+\newcommand{\iderivative}[2]{%
+  \ensuremath{%
+    \frac{\partial#1}{\partial#2}}}
+
+\newcommand{\iframe}[1]{\begin{framed}#1\end{framed}}
+
+\newcommand{\iaverage}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+%%%%%%%%%%%%%%%%%%%%
+%% COLOURS
+%%%%%%%%%%%%%%%%%%%%
+\newcommand{\red}[1]{{\color{red}{#1}}}            \newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}  \newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\newcommand{\grey}[1]{{\color{gray!60} #1}} \newcommand{\ec}{ }%end colour command
+
+
+
+\newcommand{\idensity}{\ensuremath{\begin{pmatrix}{\rho_{00}}                                   &
+      {\rho_{01}}\\{\rho_{10}}&{\rho_{11}}\end{pmatrix}}}
+
+
+%%%%%%%%%%%%%%%%%%%%
+%% REDUNDANT
+%%%%%%%%%%%%%%%%%%%%
+\newcommand{\difffrac}[2]{%
+  \ensuremath{%
+    \frac{\partial#1}{\partial#2}}} \newcommand{\ketbra}[2]{%
+  \ket{#1}\bra{#2}%
+}\newcommand{\lra}{\ensuremath{\,\leftrightarrow\,}}                  \newcommand{\iright}{\ensuremath{\quad\Rightarrow\quad}}
+\newcommand{\ipic}[2]{\begin{center} \includegraphics[height=#1]{#2}
+  \end{center}}
+\newcommand{\ifigure}[2]{\centering\makebox[\columnwidth][c]{\includegraphics[height=#1]{#2}}}
+\newcommand{\ipicCaption}[3]{\begin{figure}[!ht]
+    \begin{center}
+      \includegraphics[height=#1]{#2}
+      \caption{\small#3}
+    \end{center}
+  \end{figure}} \newcommand{\trace}[1]{\ensuremath{\text{Tr}\left\lbrace#1\right\rbrace}}
+
+%%%%%%%%%%%%%%%%%%%%
+%% UNSORTED
+%%%%%%%%%%%%%%%%%%%%
+\newcommand{\schrodinger}{Schr\"{o}dinger}
+
+
+\newcommand{\ra}{\ensuremath{\rightarrow}}                 \newcommand{\re}[1]{\text{Re}\left[#1\right]}
+\newcommand{\im}[1]{\text{Im}\left[#1\right]}
+
+
+\newcommand{\itrace}[1]{\ensuremath{\text{Tr}\left\lbrace#1\right\rbrace}}
+\newcommand{\idensityDeriv}{\ensuremath{\begin{pmatrix}\dot{\rho_{00}}                          &
+      \dot{\rho_{01}}\\\dot{\rho_{10}}&\dot{\rho_{11}}\end{pmatrix}}}
+
+\newcommand{\iz}{\ensuremath{\begin{pmatrix}1&0\\0&-1\end{pmatrix}}}
+\newcommand{\ix}{\ensuremath{\begin{pmatrix}0&1\\1&0\end{pmatrix}}}
+\newcommand{\iy}{\ensuremath{\begin{pmatrix}0&-i\\i&0\end{pmatrix}}}
+\newcommand{\imx}[4]{\ensuremath{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}}
+\newcommand{\imatrix}[4]{\ensuremath{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}}
+\newcommand{\ipure}{\ensuremath{_\red{\text{pure}}}}
+\newcommand{\imixed}{\ensuremath{_\red{\text{mixed}}}}
+\newcommand{\ialigned}[1]{\ensuremath{\left\lbrace\begin{aligned}#1\end{aligned}\right.}}
+\newcommand{\isigma}{\ensuremath{\vec{\iaverage{\sigma}}                                    }}
+\newcommand{\isigmax}{\ensuremath{{\iaverage{\sigma_x}}                                     }}
+\newcommand{\isigmay}{\ensuremath{{\iaverage{\sigma_y}}                                     }}
+\newcommand{\isigmaz}{\ensuremath{{\iaverage{\sigma_z}}                                     }}
+\newcommand{\ithreeMatrix}[3]{\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
+
+\newcommand{\iconjugate}[1]{\ensuremath{#1^{*}}} \newcommand{\irho}[1]{\ensuremath{\rho_{#1}}}
+\newcommand{\igamma}[1]{\ensuremath{\Gamma_{#1}}}             \newcommand{\ia}{\ensuremath{a}}
+\newcommand{\iadagger}{\ensuremath{a^{\dagger}}}     \newcommand{\isub}[1]{\ensuremath{_{#1}}}
+\newcommand{\alert}[1]{\red{\textbf{{#1}}}}     \newcommand{\iup}{\ensuremath{\Ket{\uparrow}}}
+\newcommand{\idown}{\ensuremath{\Ket{\downarrow}}}
+\newcommand{\iupBra}{\ensuremath{\Bra{\uparrow}}}
+\newcommand{\idownBra}{\ensuremath{\Bra{\downarrow}}}
+\newcommand{\iupKetBra}{\ensuremath{\Ket{\uparrow}\Bra{\uparrow}}}
+\newcommand{\idownKetBra}{\ensuremath{\Ket{\downarrow}\Bra{\downarrow}}}
+\newcommand{\iexpectation}[1]{\ensuremath{\left\langle#1\right\rangle}}
+
+\newcommand{\imatrixcol}[2]{\ensuremath{\begin{pmatrix} #1\\#2
+    \end{pmatrix}}} \newcommand{\imatrixthree}[3]{\ensuremath{\begin{pmatrix} #1\\#2\\#3
+    \end{pmatrix}}}
+
+\newcommand{\iRa}{\ensuremath{\quad\Rightarrow\quad}}
+\newcommand{\idagger}{\ensuremath{^{\dagger}}}             \newcommand{\xpi}{\ensuremath{\pi}}
+\newcommand{\isigmaplus}{\ensuremath{\iaverage{\sigma^{+}}}}
+\newcommand{\isigmaminus}{\ensuremath{\iaverage{\sigma^{-}}}}
+\newcommand{\isigmaplusminus}{\ensuremath{\iaverage{\sigma^{\pm}}}}
+\newcommand{\isuperposition}[1]{\ensuremath{\frac{\iket{0}#1\iket{1}}{\sqrt{2}}}}
+\newcommand{\piulse}{\ensuremath{\pi}-pulse}
+\newcommand{\icommutation}[2]{\ensuremath{\left[#1,                                #2\right]}}
+\newcommand{\ipicsmall}[2]{\includegraphics[height=#1]{#2}}
+
+\newcommand{\iexpected}[1]{\hfill\textit{#1}}        \newcommand{\ipow}[1]{\ensuremath{^{#1}}}
+\newcommand{\itimes}[1]{\ensuremath{\times10^{#1}}}
+\newcommand{\gone}[1]{\ensuremath{g^{(1)}(#1)}}
+\newcommand{\gtwo}[1]{\ensuremath{g^{(2)}(#1)}}
