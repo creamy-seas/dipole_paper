@@ -59,15 +59,15 @@ circles.
 \begin{figure}[h]
   \includegraphics[height=4.7cm]{fig3}
   \caption{\small Transition  frequencies between levels  \iket{1}\ilra \iket{2},
-    $ \omega_{21}  $ (blue), and  \iket{2} \ilra \iket{3}, $  \omega_{32}$ (red).
-    Readings for  $ \omega_{32} $  are in a narrow  flux range because  away from
-    $ \Phi  = (n + \frac{1}{2})\Phi_0,  n\in\mathbb{Z} $, it gets  harder to tune
-    the VNA to  $ \omega_{21} $ (as part of  the two-tone spectroscopy procedure)
-    which prevents the accurate mapping of  $ \omega_{32} $ with the second tone.
-    Asymmetry in  the flux penetrating  the left and  right loops results  in the
-    gradual change  of transition frequencies  with every  $ \Phi_{0} $  period -
-    $\omega_{21}$ creeps up, while $\omega_{32}$  creeps down, breaking the usual
-    spectrum periodicity of flux qubits.}
+    $ \omega_{21}  $ (blue), and \iket{2}  \ilra \iket{3}, $ \omega_{32}$  (red).  Readings
+    for   $  \omega_{32}   $  are   in  a   narrow  flux   range  because   away  from
+    $ \Phi = (n + \frac{1}{2})\Phi_0, n\in\mathbb{Z} $, it gets harder to tune the VNA to
+    $ \omega_{21}  $ (as part of  the two-tone spectroscopy procedure)  which prevents
+    the accurate mapping  of $ \omega_{32} $  with the second tone.   Asymmetry in the
+    flux penetrating  the left and right  loops results in the  gradual change of
+    transition frequencies  with every  $ \Phi_{0}  $ period  - $\omega_{21}$  creeps up,
+    while $\omega_{32}$ creeps  down, breaking the usual spectrum  periodicity of flux
+    qubits.}
   \label{fig:experiment}
 \end{figure}
 
@@ -79,14 +79,12 @@ $       \vec{n}      =       \iket{n_1,       n_2,       n_3}      $,       phas
 $     \vec{\varphi}      =     \iket{\varphi_1,      \varphi_2,     \varphi_3}     $      and     voltage
 $ \vec{V} =  \iket{V_{1}, V_{2}, V_{3}} $ states.  An  inspection of the system's
 capacitor system links the charges and voltages
-
 \begin{equation}
   \label{eq:link}
   2e\vec{n} = \hat{C}\vec{V}
 \end{equation}
 
 \noindent through the capacitance matrix
-
 \begin{equation}
   \label{eq:capac}
   C = \iabs{C} \begin{pmatrix}
@@ -96,28 +94,24 @@ capacitor system links the charges and voltages
   \end{pmatrix},
 \end{equation}
 
-\noindent  where \iabs{C}  is the  capacitance of  the outer  JJs.  The  charging
-energy,    resulting    from    the     interaction    between    charged    CPs,
-$ \vec{Q}=2e\vec{n}  $, and voltages  on the islands,  gives rise to  the kinetic
-term of the Hamiltonian:
-
+\noindent where  \iabs{C} is the capacitance  of the outer JJs.   The interaction
+between  charged CPs,  $  \vec{Q}=2e\vec{n}  $, and  voltages  on the  respective
+islands gives rise to the kinetic term of the Hamiltonian:
 \begin{equation}\label{eq:kinetic}
   \begin{aligned}
     T = \frac{1}{2}\sum_{i=1}^{3}Q_iV_i & =
     \frac{(2e)^2}{2}\vec{n}\hat{C}^{-1}\vec{n}^{T}\\
-    & =  E_C \iabs{C}  \ibra{n_{1}, n_{2},  n_{3}}{\hat{C}^{-1}}\iket{n_{1}, n_2,
-      n_3},
+    & = E_C \iabs{C} \iaverage{\hat{C}^{-1}}_{\iket{n_{1}, n_2, n_3}},
   \end{aligned}
 \end{equation}
 
-\noindent defining 
+\noindent where we define $ E_{C}={(2e)^{2}}/{2 \iabs{C} } $.
 
 Each JJ with a  phase difference of $\Delta\varphi_{i}$ across it,  contributes an energy of
 $  E_{Ji}\left(1  -  \cos(\Delta\varphi_i)\right)  $   to  the  potential  term.   The  flux
 quantization     condition     for     the      left     and     right     loops,
-$ \sum_{i}^{\text{loop}}  \varphi_i = 2\pi n,  n \in \mathbb{Z}$, which  have external biasing
-fluxes $ \varphi_\text{ext} $, $ \eta\varphi_\text{ext} $,  enters as a dependence on two of the
-junctions:
+$ \sum_{i}^{\text{loop}}  \varphi_i =  2\pi n, n  \in \mathbb{Z}$, enters  as a  dependence on
+$ \varphi_\text{ext} $ and $ \eta\varphi_\text{ext} $ on two of the junctions:
 \begin{equation}\label{eq:potential}
   \begin{aligned}
     U & = E_J\big[4 + \alpha - \alpha\cos(\varphi_{2}) -\cos(\varphi_{1}) -\cos(\varphi_{3}) - \\
@@ -127,25 +121,30 @@ junctions:
 \end{equation}
 
 The  Hamiltonian  is solved  in  the  CP basis,  $\vec{n}  $,  where it's  matrix
-representation takes the form
+representation takes the form show in Fig.~\ref{fig:matrix_representation}.
+
+\begin{figure}[ht]
+  \centering \includegraphics[height=4cm]{fig4}
+  \caption{\small \label{fig:matrix_representation} }
+\end{figure}
+
 
 \begin{equation}
   \label{eq:matrix}
-  \kbordermatrix{
+  \kbordermatrix{\footnotesize
     & \cdots & \ket{0,0,1} & \ket{0,0,2} & \ket{0,0,3} & \cdots \\
     \vdots & \ddots & \vdots &  \vdots & \vdots & \iddots \\
-    \bra{0,0,1} & \cdots & 0 & 0 & 0 & \cdots \\
+    \bra{0,0,1} & \cdots & E_C \iabs{C}\iaverage{\hat{C}^{-1}}_{\iket{0,0,1}}
+    & 0 & 0 & \cdots \\
     \bra{0,0,2} & \cdots & 0 & 0 & 0 & \cdots \\
     \bra{0,0,3} & \cdots & 0 & 0 & 0 & \cdots \\
     \vdots & \iddots & \vdots & \vdots &  \vdots & \ddots
   },
 \end{equation}
 
-\noindent
-
-in which the kinetic terms naturally fall on the diagonal and the potential terms
-are distributed symmetrically on the off diagonal positions.  The phase operators
-in         the          number         basis          representation         read
+\noindent Kinetic  terms naturally fall on  the diagonal axis of  the matrix. The
+the potential terms are distributed  symmetrically on the off diagonal positions.
+The    phase    operators   in    the    number    basis   representation    read
 $   e^{\pm  i\hat{\varphi}_j}   =  \sum_{n_i}\iketbra{n_i\pm1}{n_i}$   \cite{phase}.   The
 eigenenergies of  the resulting  Hamiltonian are  compared with  the experimental
 data  in Fig.~\ref{fig:experiment}  using \iunit{E_J  = 91.0}{GHz},  \iunit{E_C =
