@@ -1,19 +1,14 @@
 % -*- TeX-master: "../dipole_ilya_paper.tex" -*-
-\newpage
 \section{Dipole Transition}
 \label{sec:dipole-transition}
 
-\noindent Finally we characterize  the dipole moment of the
-twin qubit for between the  lowest two states, \iket{1} and
-\iket{2}.  Microwaves in the  transmission line, carrying a
-voltage  $  V_{mw}=   \iabs{V_{mw}}\cos(\omega_{21  }t)  $,  are
-coupled via  capacitor C$_{\text{coupling}}$ to  the qubit,
-inducing  a charge  $ Q_{2}=C_{\text{coupling}}V_{mw}  $ on
-island 2. \iket{1}~\ilra~\iket{2} transitions stimulated by
-this    driving,    set    up   a    qubit    voltage    of
-$ \delta V_2 = \ibra{1}\hat{V}_{20}\iket{2} $ between the ground
-island and island 2 and  hence draw an electrostatic energy
-related to the strength of the drive $\Omega$
+\noindent Finally we characterize  the dipole moment of the twin qubit  for between the lowest
+two states,  \iket{1} and \iket{2}.  Microwaves  in the transmission line,  carrying a voltage
+$ V_{mw}=  \iabs{V_{mw}}\cos(\omega_{21 }t) $,  are coupled via capacitor  C$_{\text{coupling}}$ to
+the   qubit,   inducing    a   charge   $   Q_{2}=C_{\text{coupling}}V_{mw}    $   on   island
+2. \iket{1}~\ilra~\iket{2} transitions  stimulated by this driving, set up  a qubit voltage of
+$ \delta V_2 = \ibra{1}\hat{V}_{20}\iket{2} $ between the ground island and island 2 and hence draw
+an electrostatic energy related to the strength of the drive $\Omega$
 \begin{equation}
   \label{eq:dipoleEnergy}
   \begin{aligned}
@@ -22,17 +17,13 @@ related to the strength of the drive $\Omega$
   \end{aligned}
 \end{equation}
 
-\noindent        Thus,       the        evaluation       of
-$         \ibra{1}\hat{V}_{20}\iket{2}          =         $
-$  \ibra{1}\frac{E_{C}}{2  \iabs{e}(1+\alpha)}\left[\hat{n}_1  +
-  2\hat{n}_2 +\hat{n}_3\right]\iket{2}$  gives, up  to some
-constants  of proportionality,  the coupling  strength that
-can be  achieved with  the twin  qubit system  at different
-values of the magnetic field.
+\noindent    Thus,     the    evaluation    of    $     \ibra{1}\hat{V}_{20}\iket{2}    =    $
+$ \ibra{1}\frac{E_{C}}{2 \iabs{e}(1+\alpha)}\left[\hat{n}_1 + 2\hat{n}_2 +\hat{n}_3\right]\iket{2}$
+gives, up  to some constants  of proportionality, the coupling  strength that can  be achieved
+with the twin qubit system at different values of the magnetic field.
 
-To  quantitatively  compare  coupling strength  with  other
-types of flux qubit  geometries, we re-express this voltage
-element through flux:
+To quantitatively  compare coupling  strength with  other types of  flux qubit  geometries, we
+re-express this voltage element through flux:
 \begin{equation}
   \label{eq:dipole_voltage_7}
   \begin{aligned}
@@ -42,28 +33,23 @@ element through flux:
   \end{aligned}
 \end{equation}
 
-\noindent  where  we have  used  the  free evolution  of  a
-2-level  system,  $ U(t)=e^{-i  \frac{\mathcal{H}}{\hbar}t}  $,
-$ \mathcal{H}  = -\frac{\hbar\omega_{21}}{2}\sigma_z  $, to draw  out the
-time-dependent phases  in the  second line  of calculation.
-$\beta  = {\ibra{1}\hat{\Phi}\iket{2}}/{\Phi_0}  $ is  the normalized
-coupling constant, that can be compared across geometries.
+\noindent   where    we   have   used    the   free    evolution   of   a    2-level   system,
+$                   U(t)=e^{-i                    \frac{\mathcal{H}}{\hbar}t}                   $,
+$ \mathcal{H} = -\frac{\hbar\omega_{21}}{2}\sigma_z  $, to draw out the time-dependent  phases in the second
+line  of calculation.   $\beta  =  {\ibra{1}\hat{\Phi}\iket{2}}/{\Phi_0} $  is  the normalized  coupling
+constant, that can be compared across geometries.
 
-In Fig.~\ref{fig:fig5},  $\beta$ is  compared between  our twin
-qubit   and  a   4-JJ   flux   qubit  \cite{honigl2018}   .
-Irrespective of  the energies used in  the simulations, the
-twin qubit always has a  local maximum of coupling strength
-at                     degeneracy                    points
-$ \Phi  = (n+\frac{1}{2})\Phi_0,  n\in\mathbb{Z} $, while  the 4-JJ
-coupling strength  goes to  zero. Earlier we  discussed the
-benefits of operating qubits  near degeneracy points, where
-there is a low magnetic  field sensitivity.  The twin qubit
-has  the  feature   of  supporting  \iket{1}\ilra  \iket{2}
-transitions at  these optimal working points  - transitions
-which are forbidden for other geometries.
+In  Fig.~\ref{fig:fig5},  $\beta$ is  compared  between  our twin  qubit  and  a 4-JJ  flux  qubit
+\cite{honigl2018} .   Irrespective of  the energies  used in the  simulations, the  twin qubit
+always    has   a    local   maximum    of    coupling   strength    at   degeneracy    points
+$  \Phi  =  (n+\frac{1}{2})\Phi_0,  n\in\mathbb{Z}  $,  while  the  4-JJ  coupling  strength  goes  to
+zero. Earlier  we discussed  the benefits  of operating qubits  near degeneracy  points, where
+there is  a low  magnetic field  sensitivity.  The twin  qubit has  the feature  of supporting
+\iket{1}\ilra \iket{2}  transitions at these  optimal working  points - transitions  which are
+forbidden for other geometries.
 
 \begin{figure}[h]
-  \centering \includegraphics[height=5cm]{fig5}
+  \centering \includegraphics[height=5cm]{fig6}
   \caption{\small \textbf{Dipole  transition spectrum:} The
     element $  \ibra{1}\hat{V}_{20}\iket{2} $  is evaluated
     using the flux-dependent eigenstates \iket{1}, \iket{2}
@@ -77,15 +63,11 @@ which are forbidden for other geometries.
 %                                 %                                 \frac{1}{Z_0}\hbar\omega_{21}\frac{\iabsSquared{\bra{2}T\iket{1}}}{\hbar^2}.
 % \end{equation}
 
-% \noindent The  kinetic term $ T  $ plays the role  of the
-% dipole operator for this transition and is evaluated with
-% the  eigenstates \iket{1},  \iket{2} of  the Hamiltonian.
-% Highest   transition  rates   are  achieved   around  the
-% degeneracy                                        biases,
-% $   \varphi_{\text{ext}}  =   (2n+1)\pi,   n\in\mathbb{Z}  $,   see
-% Fig.~\ref{fig:dipole_transition}.   This  region is  thus
-% favourable  for  quick  state  operations  with  external
-% driving fields.
+% \noindent The kinetic term  $ T $ plays the role of the  dipole operator for this transition
+% and  is evaluated  with  the eigenstates  \iket{1}, \iket{2}  of  the Hamiltonian.   Highest
+% transition      rates     are      achieved      around      the     degeneracy      biases,
+% $  \varphi_{\text{ext}} =  (2n+1)\pi,  n\in\mathbb{Z} $,  see Fig.~\ref{fig:dipole_transition}.   This
+% region is thus favourable for quick state operations with external driving fields.
  
 % \begin{figure}
 %   \centering \includegraphics[height=6.5cm]{figure5.png}

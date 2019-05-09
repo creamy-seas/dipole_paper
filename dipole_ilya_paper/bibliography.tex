@@ -29,27 +29,6 @@
     J.  Berkley  and E.   M. Chapple and  R. Harris and  J.  Johansson  and T. Lanting  and I.
     Perminov  and E.   Ladizinsky  and T.   Oh  and G.   Rose},  {Supercond. Sci.   Technol.},
   \textbf{23}, {065004} (2010)
-
-\bibitem{phaseExp}  Quantum  processing involves  manipulating  the  state  of a  qubit,  $\Psi$,
-  changing the relative state population, $\ensuremath{|\alpha|}  \le 1$, and phase, $\varphi$, between the
-  ground, \iket{0}, and excited, \iket{1}, states:
-  \begin{equation}
-    \label{eq:4}
-    \Psi = \alpha\iket{0} + e^{i\varphi}(1-\alpha)\iket{1}.
-  \end{equation}
-
-  \noindent  When written  as a  density  matrix, the  phase  information is  mapped onto  the
-  off-diagonal elements:
-  \begin{equation}
-    \label{eq:5}
-    \rho = \iketbra{\Psi}{\Psi} = \begin{pmatrix}
-      \iabsSquared{\alpha}  & \alpha(1-\alpha)e^{-i\varphi}\\
-      \alpha(1-\alpha)e^{+i\varphi} & \iabsSquared{(1-\alpha)}.
-    \end{pmatrix}
-  \end{equation}
-
-  \noindent The off-diagonal  elements decay to 1/e  of the initial value, over  a time period
-  $\tau_{\text{dec}}$, and phase information becomes lost.
     
 \bibitem{monroe1995} {Monroe, C.   and Meekhof, D. M.  and  King, B. E. and Itano,  W.  M. and
     Wineland, D.  J.}, {Physical Review Letters},\textbf{75}, 4714 (1995)
@@ -114,102 +93,6 @@
     Michel H. Devoret}, {Science}, \textbf{326}, 113 (2009)
 
 \bibitem{devitt2016} Devitt, Simon J., Phys. Rev. A, {94}, {032329} (2016)
-
-\bibitem{phase}  Using the  commutation  relation  for conjugate  number  and phase  operators
-  $ \left[\hat{n},\hat{\phi}\right] = 1 $
- 
-  {\scriptsize\begin{equation}\label{eq:ab1}
-      \begin{aligned}
-        \icommutation{\hat{\red{n}}}{e^{\pm i \hat{\blue{\phi}}}} & =  \icommutation{\hat{n}}{\sum_{\alpha = 0}^{\infty} \frac{(\pm i\hat{\blue{\phi}})^\alpha}{\alpha!}} = \sum_{\alpha = 0}^{\infty} (\pm i)^\alpha\frac{\icommutation{\hat{\red{n}}}{\hat{\blue{\phi}}^\alpha}}{\alpha!}\\
-        & = \sum_{\alpha =  0}^{\infty} (\pm i)^\alpha\frac{-\alpha i\hat{\blue{\phi}}^{\alpha
-            -    1}}{\alpha!}      =    \pm    \sum_{\alpha    =     1}^{\infty}i^{\alpha    -
-          1}\frac{(\pm\hat{\blue{\phi}})^{\alpha   -  1}}{(\alpha   -  1)!}    =  \pm   e^{\pm
-          i\hat{\blue{\phi}}}.
-      \end{aligned}
-    \end{equation}}
- 
-  \vspace{-1em}
-
-  Operating with the number operator yields
-  
-  {\scriptsize \begin{equation}\label{eq:ab2}
-      \begin{aligned}
-        \hat{\red{n}}\bigg[e^{\pm   i\hat{\blue{\phi}}}\ket{n}\bigg]   =   &   \bigg[\pm   e^{\pm
-          i\hat{\blue{\phi}}}    +    e^{\pm   i\hat{\blue{\phi}}}\hat{n}\bigg]\ket{n}    =    (n\pm
-        1)\bigg[e^{\pm i\hat{\blue{\phi}}}\ket{n}\bigg],
-      \end{aligned}
-    \end{equation}}
-
-  meaning that the exponential phase operator is a ladder operator for the \iket{n} state:
-
-  \begin{equation}
-    \label{eq:ab5}
-    e^{\pm i\hat{\blue{\varphi}}}\ket{n} = \ket{n \pm 1} \Rightarrow e^{\pm i\blue{\varphi}} = \sum_{{i}} \iketbra{n_{i}\pm1}{n_i}.
-  \end{equation}
-
-  \vspace{-0.2em}
-  
-  \noindent Now  phase a $\varphi_{2}$  operator can  be expressed in  the number basis  as follows:
-  {\scriptsize
-    \begin{equation}
-      \label{eq:ab4}
-      \cos(\varphi_{2}) = \frac{1}{2}\left(e^{i\varphi_{2}}+e^{-i\varphi_2}\right) = \frac{1}{2}\left(\sum_{{i}}\iketbra{n_{i}^{(2)}\pm 1}{n_{i}^{(2)}} \right)\otimes\mathbb{I}^{(1)}\otimes\mathbb{I}^{(3)}
-    \end{equation}}
-
-  \noindent    with   $    \mathbb{I}^{(1)}=\sum_{i}\iketbra{n_{i}^{(1)}}{n_{i}^{(1)}}   $    and
-  $ \mathbb{I}^{(3)}=\sum_{i}\iketbra{n_{i}^{(3)}}{n_{i}^{(3)}} $ being the identity operators in
-  the $ n^{(1)} $ and $ n^{(3)}$ subspaces.
-
-\bibitem{rabi} The Hamiltonian during driving is a combination of the qubit's two-level system
-  \begin{equation}
-    \label{eq:rabi1}
-    \mathcal{H}_{q} = -\frac{\hbar\omega_{21}}{2}\sigma_{z},
-  \end{equation}
-
-  \noindent                                                                              where
-  $\sigma_z = \ensuremath{\left(\begin{smallmatrix} 1 &  0\\0 & -1 \end{smallmatrix}\right)} $, and
-  the resonant drive of strength $ \hbar\Omega $
-
-  \begin{equation}
-    \label{eq:rabi2}
-    \mathcal{H}_{d} = \hbar\Omega\cos(\omega_{21}t)\sigma_{x}
-  \end{equation}
-
-  \noindent    that   couples    the   two    levels   through    the   transition    operator
-  $\sigma_x =  \ensuremath{\left(\begin{smallmatrix} 0 &  1 \\  1 & 0  \end{smallmatrix}\right)} $.
-  Applying                    the                    unitary                    transformation
-  $      U(t)       =      \exp      \left(-i      \frac{\omega_{21}t}{2}\sigma_z\right)       $      to
-  $ \mathcal{H} = \mathcal{H}_{q}+\mathcal{H}_{d} $ evaluates to
-
-  \begin{equation}
-    \label{eq:rabi3}
-    \begin{aligned}
-      \mathcal{H}'& = U\mathcal{H}U^{\dag} - i\hbar U\dot{U}^{\dag}\\
-      & \approx \frac{\hbar\Omega}{2}\sigma_x
-    \end{aligned}
-  \end{equation}
-
-  \noindent     under    the     approximation     that     non-conserving    energy     terms
-  $ e^{\pm 2i\omega_{21}t} $  are neglected. The evolution of a ground state  in this rotated frame
-  is
-  \begin{equation}
-    \label{eq:rabi4}
-    \begin{aligned}
-      U'(t)\iket{0} & = e^{-i\frac{\mathcal{H'}}{\hbar}t}\iket{0} \\
-      & = \cos\left({\Omega t}/{2}\right)\ket{0}+i\sin\left({\Omega t}/{2}\right)\ket{1}.
-    \end{aligned}
-  \end{equation}
-
-  \noindent   Rabi    oscillations   are    proportional   to   $    \iaverage{\sigma_{-}}   $
-  \cite{Astafiev2010}, $\sigma_{-}~=~\iketbra{0}{1}$:
-
-  \begin{equation}
-    \label{eq:rabi5}
-    \begin{aligned}
-      \iaverage{\sigma_{-}} & = \bra{0}U'^{\dag}(t) \iketbra{0}{1} U'(t)\iket{0}\\
-      & = \sin \left(\Omega t\right)
-    \end{aligned}
-  \end{equation}
 
 \bibitem{gustavsson2012} {Gustavsson, S.   and Bylander, J.  and Yan,  F.  and Forn-D\'{\i}az,
     P.  and Bolkhovsky, V.  and Braje, D.  and  Fitch, G.  and Harrabi, K. and Lennon, D.  and
