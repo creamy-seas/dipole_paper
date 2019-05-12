@@ -2,59 +2,59 @@
 \section{Dipole Transition}
 \label{sec:dipole-transition}
 
-\noindent Finally we characterize  the dipole moment of the twin qubit  for between the lowest
-two states,  \iket{1} and \iket{2}.  Microwaves  in the transmission line,  carrying a voltage
-$ V_{mw}=  \iabs{V_{mw}}\cos(\omega_{21 }t) $,  are coupled via capacitor  C$_{\text{coupling}}$ to
-the   qubit,   inducing    a   charge   $   Q_{2}=C_{\text{coupling}}V_{mw}    $   on   island
-2. \iket{1}~\ilra~\iket{2} transitions  stimulated by this driving, set up  a qubit voltage of
-$ \delta V_2 = \ibra{1}\hat{V}_{20}\iket{2} $ between the ground island and island 2 and hence draw
-an electrostatic energy related to the strength of the drive $\Omega$
+\noindent  Finally we  characterize the  dipole moment  of transition  between the  lowest two
+states,  \iket{1}   and  \iket{2}.   Microwaves   in  the  transmission  line,   with  voltage
+$   V_{\text{mw}}=   \iabs{V_{\text{mw}}}\cos(\omega_{21   }t)   $  are   coupled   via   capacitor
+C$_{\text{coupling}}$  to   the  qubit.   On   island  2   the  microwaves  induce   a  charge
+$ Q_{2}=C_{\text{coupling}}V_{\text{mw}} $.  Transitions \iket{1}~\ilra~\iket{2} stimulated by
+this driving  generate a qubit voltage  of $ \delta  V_2 = \ibra{1}\hat{V}_2\iket{2} $  between the
+ground and  island 2 and  hence draw an  electrostatic energy related  to the strength  of the
+drive $\Omega$
 \begin{equation}
   \label{eq:dipoleEnergy}
   \begin{aligned}
-    \delta V_{2}Q_{2} & = \ibra{1}\hat{V}_{20}\iket{2} C_{\text{coupling}}\iabs{V_{mw}}\cos(\omega_{21}  t) \\
+    \delta V_{2}Q_{2} & = \ibra{1}\hat{V}_2\iket{2} C_{\text{coupling}}\iabs{V_{\text{mw}}}\cos(\omega_{21}  t) \\
     & = \hbar\Omega\cos(\omega_{21}t).
   \end{aligned}
 \end{equation}
 
-\noindent    Thus,     the    evaluation    of    $     \ibra{1}\hat{V}_{20}\iket{2}    =    $
-$ \ibra{1}\frac{E_{C}}{2 \iabs{e}(1+\alpha)}\left[\hat{n}_1 + 2\hat{n}_2 +\hat{n}_3\right]\iket{2}$
-gives, up  to some constants  of proportionality, the coupling  strength that can  be achieved
-with the twin qubit system at different values of the magnetic field.
+\noindent  Thus,   up  to  the   constant  of  proportionality   $  Q_{2}  $,   evaluation  of
+$\delta     V_2     =\ibra{1}\frac{E_{C}}{2\iabs{e}(1+\alpha)}\left[\hat{n}_1     +     2\hat{n}_2     +
+  \hat{n}_3\right]\iket{2}$} gives  the coupling strength  $\Omega$ between the microwave  line and
+the qubit system.
+% at different values of the magnetic field.
 
-To quantitatively  compare coupling  strength with  other types of  flux qubit  geometries, we
-re-express this voltage element through flux:
+To  quantitatively compare  coupling  strength  between different  flux  qubit geometries,  we
+re-write the voltage element through flux:
 \begin{equation}
   \label{eq:dipole_voltage_7}
   \begin{aligned}
-    \ibra{1}\hat{V}_2 \iket{2} & =  \frac{d}{dt}\ibra{1}\hat{\Phi}\iket{2}\\
-    & = \frac{d}{dt}\left[\left(e^{i\omega_{21}t/2}\ibra{1}\right) \hat{\Phi}\left(e^{+i\omega_{21}t/2}\iket{2}\right)\right]\\
+    \ibra{1}\hat{V}_2 \iket{2} & =  \frac{d}{dt}\ibra{1}\hat{\Phi}_2\iket{2}\\
+    & = \frac{d}{dt}\left[\left(e^{i\omega_{21}t/2}\ibra{1}\right) \hat{\Phi}_2\left(e^{+i\omega_{21}t/2}\iket{2}\right)\right]\\
     & = {i\omega_{21}\beta\Phi_0},
   \end{aligned}
 \end{equation}
 
-\noindent   where    we   have   used    the   free    evolution   of   a    2-level   system,
+\noindent   where   we    have   used   the   free   evolution   of    a   two-level   system,
 $                   U(t)=e^{-i                    \frac{\mathcal{H}}{\hbar}t}                   $,
-$ \mathcal{H} = -\frac{\hbar\omega_{21}}{2}\sigma_z  $, to draw out the time-dependent  phases in the second
-line  of calculation.   $\beta  =  {\ibra{1}\hat{\Phi}\iket{2}}/{\Phi_0} $  is  the normalized  coupling
-constant, that can be compared across geometries.
+$  \mathcal{H}  =   -\frac{\hbar\omega_{21}}{2}\sigma_z  $,  to  draw  out  the   time-dependent  phases  in
+$\delta  V_2$.   The dimensionless  $\beta  =  {\ibra{1}\hat{\Phi_2}\iket{2}}/{\Phi_0}  $ is  the  normalized
+coupling constant that can be compared across geometries.
 
-In  Fig.~\ref{fig:fig5},  $\beta$ is  compared  between  our twin  qubit  and  a 4-JJ  flux  qubit
+In  Fig.~\ref{fig:fig5},  $\beta$ is  compared  between  the twin  qubit  and  a 4-JJ  flux  qubit
 \cite{honigl2018} .   Irrespective of  the energies  used in the  simulations, the  twin qubit
 always    has   a    local   maximum    of    coupling   strength    at   degeneracy    points
-$  \Phi  =  (n+\frac{1}{2})\Phi_0,  n\in\mathbb{Z}  $,  while  the  4-JJ  coupling  strength  goes  to
-zero. Earlier  we discussed  the benefits  of operating qubits  near degeneracy  points, where
-there is  a low  magnetic field  sensitivity.  The twin  qubit has  the feature  of supporting
-\iket{1}\ilra \iket{2}  transitions at these  optimal working  points - transitions  which are
-forbidden for other geometries.
+$ \Phi = n\Phi_0,  n\in\mathbb{Z} $, while the 4-JJ coupling strength goes  to zero. We have discussed
+earlier the  benefits of operating  qubits near  the degeneracy points,  where there is  a low
+magnetic field sensitivity to magnetic field  variations.  The twin qubit allows \iket{1}\ilra
+\iket{2}  transitions  at these  optimal  working  points, while  in  other  flux qubits  this
+transitions are forbidden.
 
 \begin{figure}[h]
   \centering \includegraphics[height=5cm]{fig6}
-  \caption{\small \textbf{Dipole  transition spectrum:} The
-    element $  \ibra{1}\hat{V}_{20}\iket{2} $  is evaluated
-    using the flux-dependent eigenstates \iket{1}, \iket{2}
-    of the  system's Hamiltonian and normalized to $\beta=\frac{\ibra{1}\hat{V}_2  \iket{2}}{i\omega_{21}\Phi_0}$. Plotted is the absolute magnitude $\iabs{\iabs{\beta}}$, which carries real and imaginary components. For the twin qubit we use the $ \iunit{E_J =  91.0}{GHz}, \iunit{E_C  = 13.50}{GHz}, \iunit{\alpha  = 1.023}{},  \iunit{\eta =
-      1.011}{} $ found earlier in the paper, while for the 4-JJ flux qubit we use $ E_{C} = \iunit{20}{GHz}, E_J=\iunit{30}{GHz}, \alpha=0.45 $. The operating regions the qubits lie around degeneracy points $  \Phi =  (n+\frac{1}{2})\Phi_0,  n\in\mathbb{Z}  $, where the 4-JJ flux qubit has a forbidden \iket{1} \ilra \iket{2} transition, signified by a vanishing $\beta$.
+  \caption{\small \textbf{Dipole  transition spectrum:} Compared are the absolute magnitudes of $\iabs{\iabs{\beta}}$
+    between the twin qubit and 4-JJ qubit designs. In simulations we use $ \iunit{E_J =  91.0}{GHz}, \iunit{E_C  = 13.50}{GHz}, \iunit{\alpha  = 1.023}{},  \iunit{\eta =1.011}{} $ for the twin qubit and
+    $ E_{C} = \iunit{20}{GHz}, E_J=\iunit{30}{GHz}, \alpha=0.45 $ for the 4-JJ qubit. The 4-JJ qubit has a forbidden \iket{1} \ilra \iket{2} transition, signified by a vanishing $\iabs{\beta}$ in the vicinity of degeneracy points $  \Phi =  (n+\frac{1}{2})\Phi_0,  n\in\mathbb{Z}  $.
     \label{fig:fig5}}
 \end{figure}
 
