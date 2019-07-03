@@ -1,7 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%kbordermatrix             MUSE              BE             PLACED             IN
-% /usr/local/texlive/2016/texmf-dist/tex/latex/base and then  run sudo -s texhash
-% to load it up
+%kbordermatrix MUSE  BE PLACED IN /usr/local/texlive/2016/texmf-dist/tex/latex/base  and then
+% run sudo -s texhash to load it up
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Document options
@@ -9,13 +8,13 @@
 \usepackage{cmap} %make pdf searchable
 
 %%% Geometry
-\usepackage{geometry}          \geometry{top=25mm}         \geometry{bottom=35mm}
-\geometry{left=30mm} \geometry{right=20mm}
+\usepackage{geometry}    \geometry{top=25mm}   \geometry{bottom=35mm}    \geometry{left=30mm}
+\geometry{right=20mm}
 
 %%% Headers
 % \usepackage{fancyhdr}\pagestyle{fancy}
 % \renewcommand{\headrulewidth}{0pt} % line thickness for top nots
-% \lfoot{}   \rfoot{}   \rhead{Chapter  \Alph{section}}   \chead{\roman{section}}
+% \lfoot{}      \rfoot{}      \rhead{Chapter     \Alph{section}}      \chead{\roman{section}}
 % \lhead{\roman{section}} \cfoot{} %page number by defaults
 
 %%% Linespacing
@@ -33,7 +32,7 @@
 
 %%% Common packages
 \usepackage{graphicx} %for images
-\usepackage{caption}                                \usepackage[makeroom]{cancel}
+\usepackage{caption}                                            \usepackage[makeroom]{cancel}
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} %ams package, for fonts, symbols
 \usepackage{comma} %smart comma spacing in formulas e.g. $0,3$ is number $0, 3$ list
 \usepackage{url} %addition of url in bibliogrpahy
@@ -42,14 +41,13 @@
 \usepackage{color} %colour
 \usepackage{lastpage} %total pages in document
 \relpenalty=9999 %prevent splitting of equations
-\binoppenalty=9999
-\mathtoolsset{showonlyrefs=true} %only label formulas with refferences
+\binoppenalty=9999 \mathtoolsset{showonlyrefs=true} %only label formulas with refferences
 
 %%% Hyperreferences
 \usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor} \hypersetup{
   %%% Document info
-  unicode=true,    pdftitle={},    pdfauthor={Ilya    Antonov},    pdfsubject={},
-  pdfcreator={Ilya Antonov}, pdfkeywords={} {} {},
+  unicode=true,  pdftitle={},   pdfauthor={Ilya  Antonov},   pdfsubject={},  pdfcreator={Ilya
+    Antonov}, pdfkeywords={} {} {},
   colorlinks=true, % false: ссылки в рамках; true: цветные ссылки
   linkcolor=black, %internal links
   citecolor=blue, %bib links
@@ -58,3 +56,11 @@
 }
 
 \usepackage[backend=biber]{biblatex}
+
+%% Images with Inkscape (they are used by it)
+\usepackage{xifthen} \usepackage{pdfpages} \usepackage{transparent} \usepackage{import}
+
+%% Define what directories are searched when using \input
+\makeatletter \providecommand*{\input@path}{}
+\g@addto@macro\input@path{{images_inkscape/}}% append
+\makeatother

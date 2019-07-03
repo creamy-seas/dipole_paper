@@ -1,0 +1,63 @@
+%% Creator: Inkscape inkscape 0.92.2, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'fig1.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{564.08739223bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.38480736)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{fig1.pdf}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{fig1.pdf}}%
+    \put(0.32814145,0.61660617){\color[rgb]{1,1,1}\rotatebox{-0.21708089}{\makebox(0,0)[lb]{\smash{Transmission line}}}}%
+    \put(0.47576158,0.32541508){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.04866852\unitlength}\raggedright \end{minipage}}}%
+    \put(0.51436078,0.28681592){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.00839111\unitlength}\raggedright \end{minipage}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{fig1.pdf}}%
+    \put(0.04678167,1.16930778){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{{\large (a)}}}}%
+    \put(0.55099428,1.09655409){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\large (b)}}}}%
+    \put(0.62471983,1.28832355){\color[rgb]{1,1,1}\rotatebox{-38.182792}{\makebox(0,0)[lb]{\smash{Transmission line}}}}%
+    \put(0.05839204,0.53745189){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\large (c)}}}}%
+  \end{picture}%
+\endgroup%

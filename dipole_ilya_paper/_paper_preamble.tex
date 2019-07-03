@@ -52,6 +52,9 @@ amsmath, amssymb, pra,
 \binoppenalty=9999 \mathtoolsset{showonlyrefs=true} %only label formulas with refferences
 \usepackage{bm} % bold math
 
+%%% Importing other files
+\usepackage{import}
+
 %%% Hyperreferences
 % \usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
 \hypersetup{   unicode=true,   pdftitle={Primary   insights    into   the   `dipole'   qubit},
@@ -62,3 +65,8 @@ amsmath, amssymb, pra,
   filecolor=magenta, %file links
   urlcolor=cyan %url links
 }
+
+%% Images with Inkscape (they are used by it)
+\usepackage{xifthen}
+
+\usepackage{transparent}
