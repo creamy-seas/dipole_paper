@@ -50,14 +50,16 @@
   \makeatother%
   \begin{picture}(1,1.38480736)%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fig1.pdf}}%
+    \put(0.53533859,0.2750683){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{dssdafs}}}%
+    \put(0.53030391,0.26835539){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fig1.pdf}}%
     \put(0.32814145,0.61660617){\color[rgb]{1,1,1}\rotatebox{-0.21708089}{\makebox(0,0)[lb]{\smash{Transmission line}}}}%
     \put(0.47576158,0.32541508){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.04866852\unitlength}\raggedright \end{minipage}}}%
     \put(0.51436078,0.28681592){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.00839111\unitlength}\raggedright \end{minipage}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fig1.pdf}}%
-    \put(0.04678167,1.16930778){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{{\large (a)}}}}%
-    \put(0.55099428,1.09655409){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\large (b)}}}}%
+    \put(0.04353247,1.18215906){\color[rgb]{1,1,1}\makebox(0,0)[lb]{\smash{(a)}}}%
+    \put(0.54449591,1.07174059){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(b)}}}%
     \put(0.62471983,1.28832355){\color[rgb]{1,1,1}\rotatebox{-38.182792}{\makebox(0,0)[lb]{\smash{Transmission line}}}}%
-    \put(0.05839204,0.53745189){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{{\large (c)}}}}%
+    \put(0.04347789,0.5569554){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{(c)}}}%
   \end{picture}%
 \endgroup%

@@ -1,79 +1,74 @@
-\input{dipole_ilya_paper/_paper_preamble}
-
-\input{_generic_files/_phd_command_file}
-
-\graphicspath{{images_dipole_ilya_paper/}}
-
-% \addbibresource{dipole_ilya_paper/bibliography.bib}
-
+\input{ilya_preamble}
+\input{legacy}
 
 \begin{document}
 
-\preprint{v5}
+%%% Title
+\title{Primary insights into the superconducting twin qubit}
 
-\title{Primary  insights into  the  superconducting twin  qubit} \author{I.   V.
-  Antonov} \affiliation{Royal  Holloway, University of London,  Egham, TW20 0EX,
-  UK} \affiliation{National  Physical Laboratory, Hampton Road  Teddington, TW11
-  0LW,   UK}  \author{R.    S.    Shaikhaidarov}  \affiliation{Royal   Holloway,
-  University  of  London,   Egham,  TW20  0EX,  UK}   \author{V.   N.   Antonov}
-\affiliation{Royal  Holloway,  University  of   London,  Egham,  TW20  0EX,  UK}
-\affiliation{Skolkovo  Institute  of  Science  and Technology,  Nobel  str.   3,
-  Moscow,  143026,   Russia}  \affiliation{Moscow   Institute  of   Physics  and
-  Technology, 29  Institutskiy per., 141700 Dolgoprudny,  Moscow Region, Russia}
-\author{O.V.   Astafiev}  \affiliation{Royal  Holloway,  University  of  London,
-  Egham,  TW20   0EX,  UK}   \affiliation{Skolkovo  Institute  of   Science  and
-  Technology,  Nobel  str.   3, Moscow,  143026,  Russia}  \affiliation{National
-  Physical Laboratory, Hampton Road Teddington, TW11 0LW, UK}
+%%% Author
+\author{I.  V.  Antonov}  \affiliation{Royal Holloway, University of London,  Egham, TW20 0EX,
+  UK} \affiliation{National Physical Laboratory, Hampton Road Teddington, TW11 0LW, UK}
+
+\author{R. S.  Shaikhaidarov}  \affiliation{Royal Holloway, University of  London, Egham, TW20
+  0EX, UK}
+
+\author{V.  N.  Antonov}  \affiliation{Royal Holloway, University of London,  Egham, TW20 0EX,
+  UK}  \affiliation{Skolkovo Institute  of  Science  and Technology,  Nobel  str.  3,  Moscow,
+  143026, Russia}  \affiliation{Moscow Institute  of Physics  and Technology,  29 Institutskiy
+  per., 141700 Dolgoprudny, Moscow Region, Russia}
+
+\author{O.V.  Astafiev}  \affiliation{Royal Holloway, University  of London, Egham,  TW20 0EX,
+  UK}  \affiliation{Skolkovo Institute  of  Science  and Technology,  Nobel  str.  3,  Moscow,
+  143026,  Russia} \affiliation{National  Physical Laboratory,  Hampton Road  Teddington, TW11
+  0LW, UK}
 
 \date{\today}
 
-\input{dipole_ilya_paper/abstract}
+\input{texfiles/abstract}
 
 \maketitle
 
-\input{dipole_ilya_paper/introduction}
+\input{texfiles/introduction}
 
-\input{dipole_ilya_paper/fabrication}
+\input{texfiles/fabrication}
 
-\input{dipole_ilya_paper/deployment}
+\input{texfiles/deployment}
 
-\input{dipole_ilya_paper/simulations}
+\input{texfiles/simulations}
 
-\input{dipole_ilya_paper/conclusion}
+\input{texfiles/conclusion}
 
 \newpage
 \begin{appendices}
-  \input{dipole_ilya_paper/supplement}
+  \input{texfiles/supplement}
 \end{appendices}
 
-\input{dipole_ilya_paper/bibliography}
+\input{texfiles/bibliography}
 
 \end{document}
 
-%%% Extra ideas
-%%%%%%%%%%%%%%%%%%%%
-% In this  configuration the  larger number of  degrees of energy  freedom encompassed  in the
-% phases of  the JJs,  which allows for  more stable transition  energies between  the levels.
-% whereby the change of the system's ground state
-% \noindent The energy eigenstates of $ \mathcal{H} $ correspond to current states cicrulating
-% the loop  in clockwise and  anticlockwise directions \cite{shulga2018}.  Due  to symmetrical
-% flux biasing of the two loops, no  current passes the middle junction.  Which corresponds to
-% \ra $ \varphi_\pi = 0 \text{ or } \pi $.
-% \begin{figure}[h!]
-%   \includegraphics[height = 6cm]{figure3_qubit2}
-%            \caption{Experimental          results         were          fitted          with
-%   $  E_J =  \iunit{91}{GHz}, E_C =  \iunit{13.5}{GHz}, \alpha =  \iunit{1.023}{} $,  (compared to
-%   \iunit{E_C = 10}{GHz}, \iunit{E_J=16}{GHz},  \iunit{\alpha = 1.05}{} expected from fabrication)
-%     and   an   assymetry  between   the   areas   of   the   loops   of  $   1.011   $   was
-%   introduced. \label{fig:simulation}}
-% \end{figure}
+% %%% Extra ideas
+% %%%%%%%%%%%%%%%%%%%%
+% % In this  configuration the  larger number of  degrees of energy  freedom encompassed  in the
+% % phases of  the JJs,  which allows for  more stable transition  energies between  the levels.
+% % whereby the change of the system's ground state
+% % \noindent The energy eigenstates of $ \mathcal{H} $ correspond to current states cicrulating
+% % the loop  in clockwise and  anticlockwise directions \cite{shulga2018}.  Due  to symmetrical
+% % flux biasing of the two loops, no  current passes the middle junction.  Which corresponds to
+% % \ra $ \varphi_\pi = 0 \text{ or } \pi $.
+% % \begin{figure}[h!]
+% %   \includegraphics[height = 6cm]{figure3_qubit2}
+% %            \caption{Experimental          results         were          fitted          with
+% %   $  E_J =  \iunit{91}{GHz}, E_C =  \iunit{13.5}{GHz}, \alpha =  \iunit{1.023}{} $,  (compared to
+% %   \iunit{E_C = 10}{GHz}, \iunit{E_J=16}{GHz},  \iunit{\alpha = 1.05}{} expected from fabrication)
+% %     and   an   assymetry  between   the   areas   of   the   loops   of  $   1.011   $   was
+% %   introduced. \label{fig:simulation}}
+% % \end{figure}
 
-% We attribute this to the equilibrated bias flux that is applied to the twin loops - a change
-% in flux will \includeref{mathematical proof here}.
+% % We attribute this to the equilibrated bias flux that is applied to the twin loops - a change
+% % in flux will \includeref{mathematical proof here}.
 
-% \includeref{Phase is not localised, due to infinite cosine potential.}
-  
-% \section{Aknowledgments}
-% Special thank  you to  the new clean  room and  my motivation of  confronting the  dragon of
-% chaos.
-
+% % \includeref{Phase is not localised, due to infinite cosine potential.}
+% % Special thank  you to  the new clean  room and  my motivation of  confronting the  dragon of
+% % chaos.

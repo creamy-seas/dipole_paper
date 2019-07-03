@@ -1,0 +1,201 @@
+% -*- TeX-master: "../dipole_ilya_paper.tex" -*-
+
+\section{Decoherence results in loss of quantum information}
+\label{sec:decoh-results-loss}
+
+\noindent Quantum  processing involves manipulating  the state of  a qubit, $\Psi$,  changing the
+relative state population, $\ensuremath{|\alpha|} \le 1$, and phase, $\varphi$, between states \iket{0} and
+\iket{1}:
+\begin{equation}
+  \label{eq:4}
+  \Psi = \alpha\iket{0} + e^{i\varphi}(1-\alpha)\iket{1}.
+\end{equation}
+
+\noindent  When  written as  a  density  matrix, the  phase  information  is mapped  onto  the
+off-diagonal elements:
+\begin{equation}
+  \label{eq:5}
+  \rho = \iketbra{\Psi}{\Psi} = \begin{pmatrix}
+    \iabsSquared{\alpha}  & \alpha(1-\alpha)e^{-i\varphi}\\
+    \alpha(1-\alpha)e^{+i\varphi} & \iabsSquared{(1-\alpha)}.
+  \end{pmatrix}
+\end{equation}
+
+\noindent Decoherence,  by definition, causes  the off-diagonal elements  decay to 1/e  of the
+initial  value over  a time  $\tau_{\text{dec}}$. Decoherence  causes the  loss of  computational
+information encoded in the phase $\varphi$.
+
+\section{Representation of Hamiltonian in the charge basis}
+\label{sec:repr-hamilt-charge}
+
+\noindent The Hamiltonian
+
+\begin{equation}
+  \label{eq:hamitlian_revisited}
+  \begin{aligned}
+    \mathcal{H} & = T + U\\
+    & = E_C \iabs{C} \iaverage{\hat{C}^{-1}}_{\iket{n_{1}, n_2, n_3}} \\
+    & \quad+  E_J\big[4 + \alpha - \alpha\cos(\varphi_{2}) -\cos(\varphi_{1}) -\cos(\varphi_{3}) - \\
+    &  \qquad  \cos(\varphi_{2}   -  \varphi_{1}  -  \varphi_{\text{ext}})  -  \cos(\varphi_{2}   -  \varphi_{3}  +
+    \eta\varphi_{\text{ext}})\big]
+  \end{aligned}
+\end{equation}
+
+\noindent in the charge basis  takes the  form  shown in  Fig.~\ref{fig:matrix_representation}.
+A state \iket{-1, 0,  1} would correspond to a CP-occupation of -1, 0 and 1 on islands 1, 2 and 3.  In the  matrix shown each island  can have an
+occupation $ -1 \le n_{i} \le 1$ (3 CP states), for a total of 27 system states.
+{\color{red} In the simulation,  this was increased to 343  by using $ -3 \le n_{i}  \le 3 $ - UNCLEAR WHY THIS VALUE IN PARTICULAR}.
+
+Kinetic terms  ($ {T}  $) naturally  fall on  the diagonal  axis of  the matrix.
+Potential terms ($  U $) are expanded to complex  exponentials, which become off
+diagonal elements (see Appendix~\ref{sec:expans-potent-term}).
+
+\begin{figure}[h]
+  \centering\def\svgwidth{8cm}\import{images_inkscape/}{fig4.pdf_tex}
+  \caption{\small \textbf{Hamiltonian in the CP-basis representation:} Purple square denote the kinetic terms that all fall on the main diagonal. Light blue squares denote simple off-diagonal terms distributed symmetrically about the main diagonal, arising from e.g. $\cos(\varphi_2)$. Dark blue squares are have an additional flux dependence $e^{i\varphi_{\text{ext}}}, e^{i\eta\varphi_{\text{ext}}}$, arising from e.g. $\cos(\varphi_2-\varphi_1-\varphi_{\text{ext}})$.
+    \label{fig:matrix_representation} }
+\end{figure}
+% For        example         $        \cos(\varphi_{2})         $        becomes
+% $    \mathbb{I}_{1}\otimes\frac{1}{2}\left[\sum_{n_2}\iketbra{n_2+1}{n_2}    +
+%   \iketbra{n_2-1}{n_2}   \right]\otimes\mathbb{I}_{3}    $,   where   identity
+% operators $ \mathbb{I}_{1,3} $ carry the states of the non-involved islands.
+
+
+\section{Expansion of potential term, $U$, in the CP-basis}
+\label{sec:expans-potent-term}
+
+\noindent Switching to the CP-basis, leads  to a non-trivial representation of phase-dependent
+terms in  $ U(\varphi_1,\varphi_2,\varphi_3,\varphi_{\text{ext}})  $.  The following  explanation will  illustrate the
+expansion process.
+
+\begin{enumerate}
+\item Derive  the commutation relation  between the number, $  \hat{n} $, and  the exponential
+  phase,     $    e^{\pm     i\hat{\varphi}}     $,    by     using     the    standard     relation
+  $ \left[\hat{n},\hat{\varphi}\right] = 1 $:
+ 
+  {\scriptsize\begin{equation}\label{eq:ab1}
+      \begin{aligned}
+        \icommutation{\hat{\red{n}}}{e^{\pm i \hat{\blue{\varphi}}}} & =  \icommutation{\hat{n}}{\sum_{\alpha = 0}^{\infty} \frac{(\pm i\hat{\blue{\varphi}})^\alpha}{\alpha!}} = \sum_{\alpha = 0}^{\infty} (\pm i)^\alpha\frac{\icommutation{\hat{\red{n}}}{\hat{\blue{\varphi}}^\alpha}}{\alpha!}\\
+        &  = \sum_{\alpha  = 0}^{\infty}  (\pm i)^\alpha\frac{-\alpha  i\hat{\blue{\varphi}}^{\alpha -  1}}{\alpha!}  =  \pm \sum_{\alpha  =
+          1}^{\infty}i^{\alpha  -  1}\frac{(\pm\hat{\blue{\varphi}})^{\alpha  -  1}}{(\alpha   -  1)!}   =  \pm  e^{\pm
+          i\hat{\blue{\varphi}}}.
+      \end{aligned}
+    \end{equation}}
+
+\item Operating with the number operator on state $ e^{\pm i\hat{\blue{\varphi}}}\ket{n} $ and using
+  the commutation result \begin{equation}\label{eq:ab2}
+    \begin{aligned}
+      \hat{\red{n}}\bigg[e^{\pm   i\hat{\blue{\varphi}}}\ket{n}\bigg]    =   &    \bigg[\pm   e^{\pm
+        i\hat{\blue{\varphi}}}   +  e^{\pm   i\hat{\blue{\varphi}}}\hat{n}\bigg]\ket{n}  \\   &  =   (n\pm
+      1)\bigg[e^{\pm i\hat{\blue{\varphi}}}\ket{n}\bigg].
+    \end{aligned}
+  \end{equation}
+
+\item Evidently, the exponential phase operator is a ladder operator for the \iket{n} state:
+  \begin{equation}
+    \label{eq:ab5}
+    e^{\pm i\hat{\blue{\varphi}}}\ket{n} = \ket{n \pm 1} \Rightarrow e^{\pm i\blue{\varphi}} = \sum_{{n}} \iketbra{n\pm1}{n}.
+  \end{equation}
+ 
+\item Thus  operator $\cos(\hat{\varphi}_2-\hat{\varphi}_1-\hat{\varphi}_{\text{ext}})$ can be  expressed in the
+  number basis $ \left\{n_{1},n_2,n_3\right\} $ as: {\scriptsize
+    \begin{equation}
+      \label{eq:ab4}
+      \begin{aligned}
+	\cos(\hat{\varphi}_2-& \hat{\varphi}_1-\hat{\varphi}_{\text{ext}}) =\\
+        & = \frac{1}{2}\left(e^{i\hat{\varphi}_{2}}e^{-i\hat{\varphi}_1}e^{-i\hat{\varphi}_{\text{ext}}}+\text{c.c.}\right)\\
+        & =  \frac{1}{2} \left(\left[\sum_{n_2}\iketbra{n_2+1}{n_2}\right]\right. \\
+        & \qquad \left.\otimes \left[\sum_{n_1}\iketbra{n_1-1}{n_1}\right]
+          \otimes\mathbb{I}^{(3)}\right)e^{-i\varphi_{\text{ext}}} + \text{c.c.}\\
+        &             =              \frac{1}{2}e^{-i\varphi_{\text{ext}}}             \sum_{n_{1,2,3}}
+        \iketbra{n_1-1,n_2+1,n_3}{n_1,n_2,n_3} + \text{c.c.}
+      \end{aligned}
+    \end{equation}}
+  
+\item Physically this corresponds  to a CP exchange between island 1 and  island 2. An example
+  of a term could be
+  \begin{equation}
+    \label{eq:ab6}
+    \frac{1}{2}e^{-i\varphi_{\text{ext}}}\iketbra{-1,1,0}{0,0,0} + \frac{1}{2}e^{+i\varphi_{\text{ext}}}\iketbra{0,0,0}{-1,1,0},
+  \end{equation}
+  \noindent  which would  be a  pair of  symmetrical off-diagonal  elements in  the matrix  of
+  Fig.~\ref{fig:matrix_representation}.
+\end{enumerate}
+
+
+% \section{Rabi oscillation measurements}
+% \label{sec:rabi-oscill-meas}
+
+% \noindent Rabi  oscillations are observed when  a qubit system, with  a transition frequency
+% $\omega_{21}$, is driven by microwaves in  resonance with this transition.  The expectation value
+% of  $ \iaverage{\sigma_{-}}  $, $\sigma_{-}=\iketbra{0}{1}$,  which is  measured by  a vector  network
+% analyzer \cite{Astafiev2010}, oscillates sinusoidally with the  length of the drive as shown
+% below.
+
+% \begin{enumerate}
+% \item The Hamiltonian during microwave driving of the system is a combination of the qubit's
+%   two-level system Hamiltonian
+%   \begin{equation}
+%     \label{eq:rabi1}
+%     \mathcal{H}_{q} = -\frac{\hbar\omega_{21}}{2}\sigma_{z},
+%   \end{equation}
+
+%   \noindent                                                                            where
+%   $\sigma_z = \ensuremath{\left(\begin{smallmatrix} 1  & 0\\0 & -1 \end{smallmatrix}\right)}
+%   $, and the Hamiltonian of the resonant drive of strength $ \hbar\Omega $
+%   \begin{equation}
+%     \label{eq:rabi2}
+%     \mathcal{H}_{d} = \hbar\Omega\cos(\omega_{21}t)\sigma_{x}
+%   \end{equation}
+
+%   \noindent   that    couples   the   two    levels   through   the    transition   operator
+%   $\sigma_x = \ensuremath{\left(\begin{smallmatrix} 0 & 1 \\ 1 & 0 \end{smallmatrix}\right)}
+%   $.
+
+% \item              Applying              the             unitary              transformation
+%   $     U(t)    =     \exp    \left(-i     \frac{\omega_{21}t}{2}\sigma_z\right)    $     to
+%   $ \mathcal{H} = \mathcal{H}_{q}+\mathcal{H}_{d} $ evaluates to
+%   \begin{equation}
+%     \label{eq:rabi3}
+%     \begin{aligned}
+%       \mathcal{H}'& = U\mathcal{H}U^{\dag} - i\hbar U\dot{U}^{\dag}\\
+%       & \approx \frac{\hbar\Omega}{2}\sigma_x
+%     \end{aligned}
+%   \end{equation}
+
+%   \noindent    under     the    approximation     that    non-conserving     energy    terms
+%   $ e^{\pm 2i\omega_{21}t} $ are neglected.
+  
+% \item  The evolution  of  a  ground state  in  this  rotated frame  for  a  drive of  length
+%   $ \Delta t $ is
+%   \begin{equation}
+%     \label{eq:rabi4}
+%     \begin{aligned}
+%       U'(\Delta t)\iket{0} & = e^{-i\frac{\mathcal{H'}}{\hbar}\Delta t}\iket{0} \\
+%       &     =      \cos\left({\Omega\Delta     t}/{2}\right)\ket{0}+i\sin\left({\Omega\Delta
+%         t}/{2}\right)\ket{1},
+%     \end{aligned}
+%   \end{equation}
+
+%   \noindent which as a density matrix reads
+
+%   \begin{equation}
+%     \label{eq:rabi6}
+%     \rho_{\Delta t} = \frac{1}{2}\begin{pmatrix}
+%       1 + \cos(\Omega\Delta t) & -i\sin(\Omega\Delta t)\\
+%       i\sin(\Omega\Delta t) & 1 - \cos(\Omega\Delta t)
+%     \end{pmatrix}
+%   \end{equation}
+
+%   \noindent
+
+% \item Rabi oscillations, proportional, to $ \iaverage{\sigma_{-}} $:
+%   \begin{equation}
+%     \label{eq:rabi5}
+%     \begin{aligned}
+%       \iaverage{\sigma_{-}} & = \bra{0}U'^{\dag}(t) \iketbra{0}{1} U'(t)\iket{0}\\
+%       & = \sin \left(\Omega t\right)
+%     \end{aligned}
+%   \end{equation}
+
+% \end{enumerate}

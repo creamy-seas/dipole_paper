@@ -1,0 +1,27 @@
+\newcommand{\ialigned}[1]{\ensuremath{\left\lbrace\begin{aligned}#1\end{aligned}\right.}}
+\newcommand{\ipic}[2]{\begin{center} \includegraphics[height=#1]{#2}
+  \end{center}}
+\newcommand{\ipicCaption}[3]{\begin{figure}[!ht]
+    \begin{center}
+      \includegraphics[height=#1]{#2}
+      \caption{\small#3}
+    \end{center}
+  \end{figure}}
+\newcommand{\iframe}[1]{\begin{framed}#1\end{framed}}
+\newcommand{\ra}{\ensuremath{\rightarrow}}
+\newcommand{\lra}{\ensuremath{\,\leftrightarrow\,}}
+\newcommand{\ketbra}[2]{%
+  \ket{#1}\bra{#2}%
+}
+\newcommand{\ia}{\ensuremath{a}}
+\newcommand{\imatrix}[4]{\ensuremath{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}}
+\newcommand{\xpi}{\ensuremath{\pi}}
+\newcommand{\irho}[1]{\ensuremath{\rho_{#1}}}
+\newcommand{\igamma}[1]{\ensuremath{\Gamma_{#1}}}
+\newcommand{\iconjugate}[1]{\ensuremath{#1^{*}}}
+\newcommand{\difffrac}[2]{%
+  \ensuremath{%
+    \frac{\partial#1}{\partial#2}}}
+\newcommand{\iright}{\ensuremath{\quad\Rightarrow\quad}}
+\newcommand{\imx}[4]{\ensuremath{\begin{pmatrix}#1&#2\\#3&#4\end{pmatrix}}}
+\newcommand{\ifigure}[2]{\centering\makebox[\columnwidth][c]{\includegraphics[height=#1]{#2}}}
