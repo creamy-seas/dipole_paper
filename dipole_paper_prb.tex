@@ -97,7 +97,7 @@ qubits can  be fabricated using  standard nanofabrication  techniques and integr
 into quantum circuits \cite{Johnson_2010}.
 
 One  of the  inherent limitations,  which  superconducting qubits  face is  a coherence  time,
-$\tau_{\text{dec}}$, beyond  which quantum information  becomes lost. Particularly in  flux qubit
+$\tau_{\text{dec}}$, beyond  which quantum information  becomes lost. Two main sources of de-coherence are charge and flux fluctuations in vicinity of the qubit. Charge fluctuations are particular harmful for the qubits, where the charging energy, $E_C$, is large. In  flux qubit
 architectures the JJ  energy $E_J$ dominates over  the charging energy $E_C$  ($E_J/E_C \gg 1$),
 which lowers  the device's  charge sensitivity  \cite{Orlando_1999,Chiorescu_2003,Mooij_1999}.  A
 family  of flux qubit designs  have led to  improvement of the coherence  times: shunted
@@ -106,18 +106,18 @@ flux qubit \cite{Yan_2016} , 4-JJ qubit \cite{Qiu_2016,Pop_2014}.
 
 %% Introduce qubit
 Here we investigate experimentally a `twin'  qubit, consisting of two symmetrical flux qubits,
-linked by a common $ \alpha$-Josephson Junction  (Fig.~\ref{fig:setup}).  A chain of 15 such qubits
-was recently  placed into  a coplanar  waveguide to  demonstrate flux-tunable  transmission of
-microwaves \cite{Shulga_2018}.  Of particular interest to us is the weak flux dependence of the
+linked by a common $ \alpha$-Josephson Junction  (Fig.~\ref{fig:setup}).  Of particular interest to us is the weak flux dependence of the
 system transition  energy when  it is  biased to the  degeneracy point  $\Phi_0/2 $ in each loop,  making it
-benefit from low flux fluctuation sensitivities.
+benefit from low flux fluctuation sensitivities. A chain of 15 such qubits
+was recently  placed into  a coplanar  waveguide to  demonstrate flux-tunable  transmission of
+microwaves \cite{Shulga_2018}.  
  
 We  isolate single twin qubits in the chain, replace inductive coupling by a capacitive one and couple the qubits to the  transmission line. We
-provide the experimentally measured transmission spectrum and find: anharmonicity
-with respect  to the  \iket{1}\ilra\iket{2} and  \iket{2}\ilra\iket{3} transitions;  weak flux
+provide the experimentally measured transmission spectrum and find: weak flux
 dependence  of the  transition  energies close  to  the degeneracy  point;  compliance of  the
 experimental   energy   spectrum   with   simulations  and   interesting   features   of   the
-\iket{1}~\ilra~\iket{2} dipole transition.
+\iket{1}~\ilra~\iket{2} dipole transition; anharmonicity
+with respect  to the  \iket{1}\ilra\iket{2} and  \iket{2}\ilra\iket{3} transitions.
 
 \begin{figure}[htp]
 \centering
@@ -137,8 +137,8 @@ experimental   energy   spectrum   with   simulations  and   interesting   featu
 
 %% Describe fabrication
 The sample is fabricated on an undoped silicon substrate, which is
-pre-patterned with 100~nm Au ground planes. We  use a lithography 
-system and a shadow evaporation  technique to create the structure shown in
+pre-patterned with 100~nm Au ground planes. We  use electron beam lithography 
+and a shadow evaporation  technique to fabricate The structure shown in
 Fig.~\ref{fig:setup}(a). The qubit consists of five JJs integrated into two
 symmetrical  superconducting  loops. The  JJ  have  a   layered  structure  of
 Al (20~nm) - AlO$_{\text{x}}$ - Al (30~nm).  The energy  and  capacitance of  the
@@ -146,10 +146,10 @@ central JJ  is a  factor of  $\alpha$ larger than  for the  outside ones,  which
 dimensions $400\times200$~nm$^2$.    The  coplanar  transmission   line  with
 impedance $ Z_{0} \sim 50\,\Omega $ runs to the opening between the ground planes in the
 center of the chip. The qubits are coupled to the transmission line
-through T-shaped  capacitors.  An external magnetic field is applied to control magnetic flux bias to the identical loops.
+through T-shaped  capacitors.  An external magnetic field is applied to change magnetic flux bias in the identical loops.
 
 %% Describe setup
-Our sample is mounted on a holder with a superconducting-coil magnet on the less than 13~mK
+Our sample is mounted on a holder at the 13~mK
 stage of  a dilution refrigerator.  A  superconducting shield is used  to screen
 the holder  from stray magnetic  fields.  The RF  lines connected to  the sample
 have attenuators for thermalization: -50~dBm on  the 50~K stage, -30~dBm on the
@@ -161,11 +161,13 @@ charactering the qubit,  we  took  the microwave  transmission
 spectrum with the qubit detuned, and  correct all measurements by subracting background
 transmission profile.
 
-Our primary goal  in current experiments is to study the general properties of the quantum system, find the intrinsic energy structure
-of the  qubits  and  compare it  with the  theory and verify the idea about possibility to operate in a double degeneracy point $\Phi_0/2$. 
+Our primary goal  is to study the
+
+operation of the qubit in a double degeneracy point $\Phi_0/2$, find the intrinsic energy structure
+and  develop a numerical model for the system.
 
 %% Measurement summary
-We measure  the energy  spectrum  of the  twin qubit  by measuring transmission of coherent waves,  while  sweeping  the  biasing  magnetic flux.   
+We study the energy  spectrum  of the  twin qubit  by measuring transmission of coherent waves,  while  sweeping  the  biasing  magnetic flux.   
 The  \iket{1}~\ilra~\iket{2}  transition, is  mapped  with a  network
 analyser which measures  the transmission of signal  $\omega_{\text{NA}}$ through the
 system.
@@ -183,10 +185,10 @@ $\Delta\omega/2\pi\approx25\,\text{MHz}$ FWHM. This gives us the dephasing rate 
 
 The transmission minimum at different magnetic fields
 maps   out   the   qubit's   $\omega_{21}$  transition   spectrum, Fig.~\ref{fig:transmission}(a). 
-Such a spectrum is observed in vicinity of external flux bias $\Phi \approx \Phi_0/2$ for each loop. 
+Such a spectrum is observed in vicinity of external flux bias $\Phi \approx \Phi_0/2$ for all samples. 
 Because  of  a  small
 asymmetry, $\eta\approx1$, the fluxes linked through  the left and right loops can be slightly
-different: $ \Phi$ and $ \eta\Phi $, correspondingly.
+different: $ \Phi$ and $ \eta\Phi $, correspondingly. Eventually this results in gradual change of transmission frequency at large magnetic field, Fig~\ref{fig:transmission}(b).
 
 \begin{figure}[h]
   \includegraphics[width=86mm]{fig2}
@@ -219,9 +221,9 @@ the second tone from the generator hits the \iket{2}\ira\iket{3} transition
 states \iket{1} and \iket{2}.  Because of this depopulation, the probe signal at $\omega_{21}$ is
 modified.
 This identifies  $\omega_{32}$, which  is mapped  with red  circles in  the transition
-energy-magnetic field spectrum, Fig~\ref{fig:transmission}(b). Note more than 2~GHz anharmonicity in the two lowest transitions.  
+energy-magnetic field spectrum, Fig~\ref{fig:transmission}(b). Note more than 7.5~GHz anharmonicity in the two lowest transitions.  
 
-We match the  experimental data points to simulations: Islands,  isolated by the
+We match the  experimental data to the theoretical model: Islands,  isolated by the
 JJ  in  Fig.~\ref{fig:setup},  are  labeled with  Cooper  pair  (CP)  occupation
 $       \vec{n}      =       \iket{n_1,      n_2,       n_3}      $,       phase
 $     \vec{\varphi}     =     \iket{\varphi_1,     \varphi_2,     \varphi_3}     $  states.  The charges and potentials on
@@ -272,7 +274,7 @@ because away from $ \Phi = (n + \frac{1}{2}) \Phi_0, n\in\mathbb{Z} $, it gets h
 $ \omega_{21} $  in two-tone spectroscopy.  The  asymmetry value, $ \eta $,  is close to
 the  3\%  seen  from  the   SEM  image  in
 Fig.~\ref{fig:setup}.  The  resonance is  periodic in flux,  with a  tendency of
-higher $\omega_{21}$ at higher magnetic flux numbers.
+higher $\omega_{21}$ at higher magnetic flux numbers, because of asymmetry.
 
 \begin{figure}
   \includegraphics[width=86mm]{fig3}
@@ -287,14 +289,14 @@ desirable, to  make the  qubit less  sensitive to  external flux  changes, which
 would  improve  decoherence  time.   At   the  twin  qubits'  degeneracy  points
 $      \Phi     =      (n+\frac{1}{2})\Phi_0,     n\in\mathbb{Z}      $,     the      curvature     is
 $   (-550\pm10)\,\text{GHz}/\Phi_0^2  $.    It is substantially smaller than for 3-JJ and 4-JJ flux qubits with 
-similar JJ parameters parameters, which is of the order of 
+similar JJ parameters parameters, where the curvature is of the order of 
 $ 10^5$ $  \text{GHz}/\Phi_0^2$ \cite{Astafiev_2010, Stern_2014, Gustavsson_2012}. 
 
 Figure~\ref{fig:simulations} shows simulation results for an ideal case of fully symmetric system ($\eta=1$). 
 It is slightly different from the experiment. First of all, the parameters are exactly periodic in magnetic filed with period of $\Phi_0$, therefore, 
 plotting one interval form 0 to 1 of $\Phi_0$ is sufficient. The transition energies shown in Fig.~\ref{fig:simulations}(a) are close to the experiment and the working range is in vicinity of $\Phi_0/2$ ranges approximately from 0.4 to 0.6 of $\Phi_0$, where $\alpha$-junction is in the superposed 0-$\pi$ state\cite{Shulga_2018}. Away from that range the transition frequency $\omega_{21}$ is too high.
 
-Next, transition matrix elements $d_{12} = \ibra{1}\hat{V}_2\iket{2}$, $d_{13} = \ibra{1}\hat{V}_2\iket{3}$ and $d_{12} = \ibra{2}\hat{V}_2\iket{3}$, which have meaning of induced potential on the island 2 due to excitations, are calculated and plotted in Fig.~\ref{fig:simulations}(b). Here the potential operator on the island 2 is $\hat{V}_2 = \frac{\partial H}{\partial q_2}$, which is shown in the \textbf{Supplement Notes} to be:
+Transition matrix elements $d_{12} = \ibra{1}\hat{V}_2\iket{2}$, $d_{13} = \ibra{1}\hat{V}_2\iket{3}$ and $d_{12} = \ibra{2}\hat{V}_2\iket{3}$, which have meaning of induced potential on the island 2 due to excitations, are calculated and plotted in Fig.~\ref{fig:simulations}(b). Here the potential operator on the island 2 is $\hat{V}_2 = \frac{\partial H}{\partial q_2}$, which is shown in the \textbf{Supplement Notes} to be:
 \begin{equation}
   \label{eq:dv2}
   \delta     V_2     =\ibra{1}\frac{E_{C}}{2\iabs{e}(1+\alpha)}\left[\hat{n}_1     +     2\hat{n}_2     +
@@ -302,9 +304,9 @@ Next, transition matrix elements $d_{12} = \ibra{1}\hat{V}_2\iket{2}$, $d_{13} =
 \end{equation}
 
 
-Finally, we measure Rabi oscillations shown in Fig.~\ref{fig:rabi}, applying excitation pulses. We found that the oscillations decay with characteristic time $\tau_{\text{dec}}$~=~42~ns, 
-The decay time gives approximately same decoherence rate, as in the spectroscopy measurements $\Gamma_2\approx1/\tau_{\text{dec}}$ (Fig.~\ref{fig:rabi}). 
-The short time can be a result of poisoning of  the sample
+Finally, we measure Rabi oscillations, see Fig.~\ref{fig:rabi}, applying excitation pulses. The oscillations decay with characteristic time $\tau_{\text{dec}}$~=~42~ns, 
+It is approximately the same as the decoherence time, as in the spectroscopy measurements $\Gamma_2\approx1/\tau_{\text{dec}}$ (Fig.~\ref{fig:rabi}). 
+A small decoherence time can be a result of poisoning of  the sample
 with  the infrared  radiation, and  the  coupling two-level  oscillators in  the
 substrate, owing to the simplified technology used in the qubit's fabrication. Note also that the decay can not be long and is additionally limited due to strongly coupling to the open line. 
 
@@ -317,8 +319,7 @@ substrate, owing to the simplified technology used in the qubit's fabrication. N
 \end{figure}
 
 In conclusion, we  have fabricated and  characterized an isolated  twin qubit.  It  has weak
-flux  sensitivity at degeneracy  points
-$ \Phi =  (n+\frac{1}{2})\Phi_0, n\in\mathbb{Z} $. The measured energy level structure is well reproduced by our simulations. 
+flux  sensitivity at degeneracy  points. The measured energy level structure is well reproduced by the numerical model.
 
 \bibliography{dipole_ilya_paper}
 
