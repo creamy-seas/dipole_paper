@@ -1,0 +1,109 @@
+\documentclass[%
+% reprint,
+superscriptaddress,
+% groupedaddress,
+% unsortedaddress,
+% runinaddress,
+% frontmatterverbose,
+preprint,
+preprintnumbers,
+% nofootinbib,
+% nobibnotes,
+bibnotes,
+amsmath,
+amssymb,
+aps,
+showkeys,
+% pra,
+prb,
+% rmp, prstab, prstper, floatfix,
+]{revtex4-2}
+
+\usepackage{braket}
+\usepackage{graphicx}
+\graphicspath{{images_inkscape/}}
+\usepackage{dcolumn}                    % Align table columns on decimal point
+\usepackage{bm}                         % bold mathb
+\usepackage{hyperref}                   % add hypertext capabilities
+\usepackage[mathlines]{lineno}          % Enable numbering of text and display math
+% \linenumbers\relax                    % Commence numbering lines
+
+% \usepackage[showframe,%Uncomment any one of the following lines to test
+% scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
+% text={7in,10in},centering,
+% margin=1.5in,      total={6.5in,8.75in},      top=1.2in,      left=0.9in,      includefoot,
+% height=10in,a5paper,hmargin={3cm,0.8in},
+% ]{geometry}
+
+%% Common Packages
+\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor} % for colouring \color{red!20}
+\usepackage{framed}         	% \begin{framed} for framed boxes
+\usepackage{multirow}               % merge rows in tables
+
+%%% COLOURS
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\newcommand{\grey}[1]{{\color{gray!60} #1}}
+\newcommand{\ec}{ }                             % end colour command for emacs regexp
+\definecolor{amber}{rgb}{1.0, 0.75, 0.0}
+\newcommand{\gold}[1]{{\color{amber}{#1}}}
+
+%%% Physics
+% Bra and Ket
+\newcommand{\iket}[1]{\ensuremath{\Ket{#1}}}
+\newcommand{\ibra}[1]{\ensuremath{\Bra{#1}}}
+\newcommand{\iketbra}[2]{\ket{#1}\bra{#2}}
+\newcommand{\iup}{\ensuremath{\Ket{\uparrow}}}
+\newcommand{\idown}{\ensuremath{\Ket{\downarrow}}}
+\newcommand{\iupBra}{\ensuremath{\Bra{\uparrow}}}
+\newcommand{\idownBra}{\ensuremath{\Bra{\downarrow}}}
+\newcommand{\iupKetBra}{\ensuremath{\Ket{\uparrow}\Bra{\uparrow}}}
+\newcommand{\idownKetBra}{\ensuremath{\Ket{\downarrow}\Bra{\downarrow}}}
+% matrices
+\newcommand{\iz}{\ensuremath{\begin{pmatrix}1&0\\0&-1\end{pmatrix}}}
+\newcommand{\ix}{\ensuremath{\begin{pmatrix}0&1\\1&0\end{pmatrix}}}
+\newcommand{\iy}{\ensuremath{\begin{pmatrix}0&-i\\i&0\end{pmatrix}}}
+\newcommand{\idensity}{\ensuremath{\begin{pmatrix}{\rho_{00}} & {\rho_{01}}\\{\rho_{10}}&{\rho_{11}}\end{pmatrix}}}
+
+% symbols
+\newcommand{\isigma}{\ensuremath{\vec{\iaverage{\sigma}}}}
+\newcommand{\isigmax}{\ensuremath{{\iaverage{\sigma_x}}}}
+\newcommand{\isigmay}{\ensuremath{{\iaverage{\sigma_y}}}}
+\newcommand{\isigmaz}{\ensuremath{{\iaverage{\sigma_z}}}}
+\newcommand{\iadagger}{\ensuremath{a^{\dagger}}}
+\newcommand{\isigmaplus}{\ensuremath{\iaverage{\sigma^{+}}}}
+\newcommand{\isigmaminus}{\ensuremath{\iaverage{\sigma^{-}}}}
+\newcommand{\isigmaplusminus}{\ensuremath{\iaverage{\sigma^{\pm}}}}
+
+
+%%% Math simplicity
+\newcommand{\iunit}[2]{\ensuremath{#1\,\text{#2}}}
+\newcommand{\iunitMixed}[3]{\ensuremath{#1\,#2\text{#3}}}
+\newcommand{\iabsSquared}[1]{\ensuremath{\left|#1\right|^2}}
+\newcommand{\iabs}[1]{\ensuremath{\left|#1\right|}}
+\newcommand{\icommutation}[2]{\ensuremath{\left[#1,                                #2\right]}}
+\newcommand{\iaverage}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+\newcommand{\iderivative}[2]{%
+  \ensuremath{%
+    \frac{\partial#1}{\partial#2}}}
+\newcommand{\ira}{\ensuremath{\,\rightarrow\,}}
+\newcommand{\iRa}{\ensuremath{\qquad\Rightarrow\qquad}}
+\newcommand{\ilra}{\ensuremath{\,\leftrightarrow\,}}
+\newcommand{\iratext}[1]{\ensuremath{\,\xrightarrow{\text{#1}}\,}}
+
+\begin{document}
+
+\title{Cover letter for submission}
+
+\maketitle
+
+\noindent We are submitting the paper ``The superconducting twin qubit'' to \texttt{Physics Review B - Rapid Communications}, were we characterise a recent variation of the standard flux qubit geometry.
+
+The experimentally studied qubit has high anharmonicity and low sensitivity to global flux noise. The simulations we perform and match to experiment, can be used as a starting point for further investigation of similar systems on this alternative type of qubit. We provide experimental evidence of it's transition spectrum and decoherence behaviour as well as outlining the fabrication and measurement procedure.
+
+This will be of interest to groups that want to reduce unwanted sources of noise in operations involving superconducting qubits, while maintaining robust addressing of specific transitions within the system. We believe that there is interesting research that can be performed in this qubit platform. We ask for priority handling of the paper, so as to increase it's exposure to potential scientific and industrial research groups.
+
+
+\end{document}

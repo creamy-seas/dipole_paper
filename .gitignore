@@ -1,4 +1,15 @@
+
 _iterations
 auto
 !*.tex
 !*.pdf
+*.aux
+*.bbl
+*.blg
+*.el
+*.fdb
+*.fls
+*.log
+*.out
+*.gz
+*fdb_latexmk
