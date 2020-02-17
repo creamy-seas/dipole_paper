@@ -17,7 +17,7 @@ showkeys,
 % pra,
 prb,
 % rmp, prstab, prstper, floatfix,
-]{revtex4-2}
+]{revtex4-1}
 
 \usepackage{braket}
 \usepackage{graphicx}
@@ -96,8 +96,26 @@ prb,
 \begin{document}
 
 \title{Supplementary Notes: The superconducting twin qubit}
+% \thanks{A footnote to the article title}%
 
-% \maketitle
+\author{I.  V.  Antonov}  \affiliation{Royal Holloway, University of London,  Egham, TW20 0EX,
+  UK} \affiliation{National Physical Laboratory, Hampton Road Teddington, TW11 0LW, UK}
+
+\author{R. S.  Shaikhaidarov} \affiliation{Royal Holloway,  University of London,  Egham, TW20
+  0EX, UK}
+
+\author{V.  N.  Antonov} \affiliation{Skolkovo Institute of Science and Technology, Nobel str.
+  3, Moscow,  143026, Russia} \affiliation{Royal  Holloway, University of London,  Egham, TW20
+  0EX,  UK} \affiliation{Moscow  Institute of  Physics and  Technology, 29  Institutskiy per.,
+  141700 Dolgoprudny, Moscow Region, Russia}
+
+\author{O.V.  Astafiev} \affiliation{Skolkovo Institute of  Science and Technology, Nobel str.
+  3, Moscow,  143026, Russia} \affiliation{Royal  Holloway, University of London,  Egham, TW20
+  0EX, UK} \affiliation{National Physical Laboratory, Hampton Road Teddington, TW11 0LW, UK}
+
+\date{\today}% It is always \today, today,
+
+\maketitle
 % \date{\today}
 % \author{I.  V.  Antonov}  \affiliation{Royal Holloway, University of London,  Egham, TW20 0EX,
 %   UK} \affiliation{National Physical Laboratory, Hampton Road Teddington, TW11 0LW, UK}
@@ -132,14 +150,25 @@ prb,
 \section{Capacitance matrix}
 \label{sec:capacitance-matrix}
 
-\begin{framed}\noindent
-  Here we derive the capacitance matrix using the main part of the paper:
+We are considering a capacitance network of the qubit, shown in Fig. (1). Each Josephson junction has capacitance $C_{ij}$, where $i$ and $j$ are island numbers (0, 1, 2, 3). The corresponding capacitance matrix is
   \begin{equation}
-\vec{C} =  \iabs{C} \begin{pmatrix}
+\bold{C} =  \begin{pmatrix}
+      C_{01} + C_{12}& -C_{12} & 0\\
+      -C_{12} & C_{12} + C_{02} + C_{23} + C_c & -C_{23}\\
+      0 & -C_{23} & C_{03} + C_{23}
+    \end{pmatrix}
+    .
+  \end{equation}
+All Josephson junctions except the central one are identical and equal to $C$: $C_{01} = C_{12} = C_{03} = C_{23} = C$. The central junction is different, which together with small coupling capacitance $C_c$ can be represented as $C_{02} + C_c = \alpha' C$. Note that $C_c \ll C$ and $\alpha' \approx \alpha$.    
+The capacitance matrix is simplified to 
+\begin{framed}\noindent
+  \begin{equation}
+\bold{C} =  C \begin{pmatrix}
       2 & -1 & 0\\
       -1 & 2 + \alpha & -1\\
       0 & -1 & 2
     \end{pmatrix}
+    .
   \end{equation}
 
 \end{framed}
@@ -150,90 +179,102 @@ prb,
   \caption{\textbf{Topology of the twin flux qubit.}\label{fig:supp1}}
 \end{figure}
 
-The capacitance matrix is found from expressing the charges on the 3 different islands on the system, Fig~\ref{fig:supp1}. The voltage on the ground island is assumed to be V$_{0} = $0.
-  
-  \begin{equation}
-    \label{eq:4jjlinear_1}
-    \vec{Q} = C\vec{V} \equiv \begin{bmatrix}
-      \left|C\right|\left(V_1-0\right) + \left|C\right|\left(V_1-V_2\right) \\
-      \left|C\right|\left(V_2-V_1\right) + \left|C\right|\left(V_2-V_3\right)+ \left|C\right|\left(V_2-0\right) \\
-      \left|C\right|\left(V_3-V_2\right) + \left|C\right|\left(V_3-0\right) \\
-    \end{bmatrix} = \iabs{C} \begin{pmatrix}
-      2 & -1 & 0\\
-      -1 & 2 + \alpha & -1\\
-      0 & -1 & 2
-    \end{pmatrix}\begin{pmatrix}
-      V_{1}\\V_2\\V_{3}.
-    \end{pmatrix}
-  \end{equation}
+The capacitance matrix couples charges on the islands $2e\vec{n} = 2e\{ n_1, n_2, n_3\}$ with their potentials $\vec{V} = \{ V_1, V_2, V_3\}$ according to $2e\vec{n} = \bold{C} \vec{V}$ and an electrostatic energy of the qubit is simplified to kinetic (phase dynamics) 
+\begin{equation}
+T= E_C C \vec{n}^T \bold{C}^{-1} \vec{n}, 
+\end{equation}
+where the charging energy $E_C = \frac{(2e)^2}{2C}$. The potential energy due to Josephson junction is 
+\begin{equation}
+U = E_J [4 + \alpha - \alpha \cos{\varphi_2} - \cos{\varphi_1} - \cos{\varphi_3} - \cos{(\varphi_2 - \varphi_1 - \varphi_{ext})} - \cos{(\varphi_2 - \varphi_3 + \eta \varphi_{ext})}].  
+\end{equation}
 
 \section{Representation of Hamiltonian in the charge basis}
 \label{sec:repr-hamilt-charge}
 
-\begin{framed}\noindent
-  Here, we show how to represent the Hamiltonian of the system in matrix form for the charge basis, Fig~\ref{fig:matrix_representation}.
-\end{framed}
+We represent the system Hamiltonian $H=T+U$ in the charge basis.  
+Taking into account the phase operator form $e^{\pm i\varphi} = \ket{n\pm 1}\bra{n}$ and omitting constants in the potential energy, the Hamiltonian is transformed to 
+%\begin{eqnarray}
+\begin{align}
+H = E_C C \vec{n}^T &\bold{C}^{-1} \vec{n} -\frac{E_J}{2}\big(\alpha\ket{n_2+1}\bra{n_2}+\ket{n_1+1}\bra{n_1}+ \ket{n_3+1}\bra{n_3} + \nonumber\\
+       & + e^{-i\varphi_{ext}}\ket{n_1-1,n_2+1}\bra{n_1,n_2} + e^{+i\eta\varphi_{ext}}\ket{n_2+1,n_3-1}\bra{n_2,n_3} + c.c. \big)
+\end{align}
+%\end{eqnarray}
 
-\noindent The Hamiltonian
 
-\begin{equation}
-  \label{eq:hamitlian_revisited}
-  \begin{aligned}
-    \mathcal{H} & = T + U\\
-    & = E_C \iabs{C} \iaverage{\hat{C}^{-1}}_{\iket{n_{1}, n_2, n_3}} \\
-    & \quad+  E_J\big[4 + \alpha - \alpha\cos(\varphi_{2}) -\cos(\varphi_{1}) -\cos(\varphi_{3}) - \\
-    &  \qquad  \cos(\varphi_{2}   -  \varphi_{1}  -  \varphi_{\text{ext}})  -  \cos(\varphi_{2}   -  \varphi_{3}  +
-    \eta\varphi_{\text{ext}})\big]
-  \end{aligned}
-\end{equation}
+%\begin{framed}\noindent
+%  Here, we show how to represent the Hamiltonian of the system in matrix form for the charge basis, Fig~\ref{fig:matrix_representation}.
+%\end{framed}
+%
+%\noindent The Hamiltonian
+%
+%\begin{equation}
+%  \label{eq:hamitlian_revisited}
+%  \begin{aligned}
+%    \mathcal{H} & = T + U\\
+%    & = E_C \iabs{C} \vec{n}^T\bold{C}^{-1}\vec{n} \\
+%    & \quad+  E_J\big[4 + \alpha - \alpha\cos(\varphi_{2}) -\cos(\varphi_{1}) -\cos(\varphi_{3}) - \\
+%    &  \qquad  \cos(\varphi_{2}   -  \varphi_{1}  -  \varphi_{\text{ext}})  -  \cos(\varphi_{2}   -  \varphi_{3}  +
+%    \varphi_{\text{ext}})\big]
+%  \end{aligned}
+%\end{equation}
 
-\noindent in the charge basis  takes the  form  shown in  Fig.~\ref{fig:matrix_representation}, where a state \iket{-1, 0,  1} would correspond to a CP-occupation of -1, 0 and 1 on islands 1, 2 and 3. Kinetic terms  ($ {T}(n_1, n_2, n_3  $) naturally  fall on  the diagonal  axis of  the matrix. The phase-dependent term ($ U(\varphi_1,\varphi_2,\varphi_3,\varphi_{\text{ext}})  $) are represented using the following procedure:
-
-\begin{enumerate}
-\item Derive  the commutation relation  between the number, $  \hat{n} $, and  the exponential
-  phase,     $    e^{\pm     i\hat{\varphi}}     $,    by     using     the    standard     relation
-  $ \left[\hat{n},\hat{\varphi}\right] = 1 $:
- 
-  {\scriptsize\begin{equation}\label{eq:ab1}
-      \begin{aligned}
-        \icommutation{\hat{\red{n}}}{e^{\pm i \hat{\blue{\varphi}}}} & =  \icommutation{\hat{n}}{\sum_{\alpha = 0}^{\infty} \frac{(\pm i\hat{\blue{\varphi}})^\alpha}{\alpha!}} = \sum_{\alpha = 0}^{\infty} (\pm i)^\alpha\frac{\icommutation{\hat{\red{n}}}{\hat{\blue{\varphi}}^\alpha}}{\alpha!}\\
-        &  = \sum_{\alpha  = 0}^{\infty}  (\pm i)^\alpha\frac{-\alpha  i\hat{\blue{\varphi}}^{\alpha -  1}}{\alpha!}  =  \pm \sum_{\alpha  =
-          1}^{\infty}i^{\alpha  -  1}\frac{(\pm\hat{\blue{\varphi}})^{\alpha  -  1}}{(\alpha   -  1)!}   =  \pm  e^{\pm
-          i\hat{\blue{\varphi}}}.
-      \end{aligned}
-    \end{equation}}
-
-\item Operating with the number operator on state $ e^{\pm i\hat{\blue{\varphi}}}\ket{n} $ and using
-  the commutation result \begin{equation}\label{eq:ab2}
-    \begin{aligned}
-      \hat{\red{n}}\bigg[e^{\pm   i\hat{\blue{\varphi}}}\ket{n}\bigg]    =   &    \bigg[\pm   e^{\pm
-        i\hat{\blue{\varphi}}}   +  e^{\pm   i\hat{\blue{\varphi}}}\hat{n}\bigg]\ket{n}  \\   &  =   (n\pm
-      1)\bigg[e^{\pm i\hat{\blue{\varphi}}}\ket{n}\bigg].
-    \end{aligned}
-  \end{equation}
-
-\item Evidently, the exponential phase operator is a ladder operator for the \iket{n} state:
-  \begin{equation}
-    \label{eq:ab5}
-    e^{\pm i\hat{\blue{\varphi}}}\ket{n} = \ket{n \pm 1} \Rightarrow e^{\pm i\blue{\varphi}} = \sum_{{n}} \iketbra{n\pm1}{n}.
-  \end{equation}
- 
-\item Thus  operator $\cos(\hat{\varphi}_2-\hat{\varphi}_1-\hat{\varphi}_{\text{ext}})$ can be  expressed in the
-  number basis $ \left\{n_{1},n_2,n_3\right\} $ as: {\scriptsize
-    \begin{equation}
-      \label{eq:ab4}
-      \begin{aligned}
-	\cos(\hat{\varphi}_2-& \hat{\varphi}_1-\hat{\varphi}_{\text{ext}}) =\\
-        & = \frac{1}{2}\left(e^{i\hat{\varphi}_{2}}e^{-i\hat{\varphi}_1}e^{-i\hat{\varphi}_{\text{ext}}}+\text{c.c.}\right)\\
-        & =  \frac{1}{2} \left(\left[\sum_{n_2}\iketbra{n_2+1}{n_2}\right]\right. \\
-        & \qquad \left.\otimes \left[\sum_{n_1}\iketbra{n_1-1}{n_1}\right]
-          \otimes\mathbb{I}^{(3)}\right)e^{-i\varphi_{\text{ext}}} + \text{c.c.}\\
-        &             =              \frac{1}{2}e^{-i\varphi_{\text{ext}}}             \sum_{n_{1,2,3}}
-        \iketbra{n_1-1,n_2+1,n_3}{n_1,n_2,n_3} + \text{c.c.}
-      \end{aligned}
-    \end{equation}}
+%\noindent in the charge basis  takes the  form  shown in  Fig.~\ref{fig:matrix_representation}, where a state \iket{-1, 0,  1} would correspond to a Cooper pair (CP) occupation of -1, 0 and 1 on islands 1, 2 and 3. Kinetic terms  ($ {T}(n_1, n_2, n_3  $) naturally  fall on  the diagonal  axis of  the matrix. The phase-dependent term ($ U(\varphi_1,\varphi_2,\varphi_3,\varphi_{\text{ext}})  $) are represented using the following procedure:
+%
+%\begin{enumerate}
+%\item Derive  the commutation relation  between the number, $  \hat{n} $, and  the exponential
+%  phase,     $    e^{\pm     i\hat{\varphi}}     $,    by     using     the    standard     relation
+%  $ \left[\hat{n},\hat{\varphi}\right] = 1 $:
+% 
+%  {\scriptsize\begin{equation}\label{eq:ab1}
+%      \begin{aligned}
+%        \icommutation{\hat{\red{n}}}{e^{\pm i \hat{\blue{\varphi}}}} & =  \icommutation{\hat{n}}{\sum_{\alpha = 0}^{\infty} \frac{(\pm i\hat{\blue{\varphi}})^\alpha}{\alpha!}} = \sum_{\alpha = 0}^{\infty} (\pm i)^\alpha\frac{\icommutation{\hat{\red{n}}}{\hat{\blue{\varphi}}^\alpha}}{\alpha!}\\
+%        &  = \sum_{\alpha  = 0}^{\infty}  (\pm i)^\alpha\frac{-\alpha  i\hat{\blue{\varphi}}^{\alpha -  1}}{\alpha!}  =  \pm \sum_{\alpha  =
+%          1}^{\infty}i^{\alpha  -  1}\frac{(\pm\hat{\blue{\varphi}})^{\alpha  -  1}}{(\alpha   -  1)!}   =  \pm  e^{\pm
+%          i\hat{\blue{\varphi}}}.
+%      \end{aligned}
+%    \end{equation}}
+%
+%\item Operating with the number operator on state $ e^{\pm i\hat{\blue{\varphi}}}\ket{n} $ and using
+%  the commutation result \begin{equation}\label{eq:ab2}
+%    \begin{aligned}
+%      \hat{\red{n}}\bigg[e^{\pm   i\hat{\blue{\varphi}}}\ket{n}\bigg]    =   &    \bigg[\pm   e^{\pm
+%        i\hat{\blue{\varphi}}}   +  e^{\pm   i\hat{\blue{\varphi}}}\hat{n}\bigg]\ket{n}  \\   &  =   (n\pm
+%      1)\bigg[e^{\pm i\hat{\blue{\varphi}}}\ket{n}\bigg].
+%    \end{aligned}
+%  \end{equation}
+%
+%\item Evidently, the exponential phase operator is a ladder operator for the \iket{n} state:
+%  \begin{equation}
+%    \label{eq:ab5}
+%    e^{\pm i\hat{\blue{\varphi}}}\ket{n} = \ket{n \pm 1} \Rightarrow e^{\pm i\blue{\varphi}} = \sum_{{n}} \iketbra{n\pm1}{n}.
+%  \end{equation}
+% 
+%\item Thus  operator $\cos(\hat{\varphi}_2-\hat{\varphi}_1-\hat{\varphi}_{\text{ext}})$ can be  expressed in the
+%  number basis $ \left\{n_{1},n_2,n_3\right\} $ as: {\scriptsize
+%    \begin{equation}
+%      \label{eq:ab4}
+%      \begin{aligned}
+%	\cos(\hat{\varphi}_2-& \hat{\varphi}_1-\hat{\varphi}_{\text{ext}}) =\\
+%        & = \frac{1}{2}\left(e^{i\hat{\varphi}_{2}}e^{-i\hat{\varphi}_1}e^{-i\hat{\varphi}_{\text{ext}}}+\text{c.c.}\right)\\
+%        & =  \frac{1}{2} \left(\left[\sum_{n_2}\iketbra{n_2+1}{n_2}\right]\right. \\
+%        & \qquad \left.\otimes \left[\sum_{n_1}\iketbra{n_1-1}{n_1}\right]
+%          \otimes\mathbb{I}^{(3)}\right)e^{-i\varphi_{\text{ext}}} + \text{c.c.}\\
+%        &             =              \frac{1}{2}e^{-i\varphi_{\text{ext}}}             \sum_{n_{1,2,3}}
+%        \iketbra{n_1-1,n_2+1,n_3}{n_1,n_2,n_3} + \text{c.c.}
+%     \end{aligned}
+%    \end{equation}}
   
-\item Physically this corresponds  to a CP exchange between island 1 and  island 2. An example
+%\item Physically this last term corresponds  to a CP exchange between island 1 and  island 2. An example
+%  of a term could be
+%  \begin{equation}
+%    \label{eq:ab6}
+%    \frac{1}{2}e^{-i\varphi_{\text{ext}}}\iketbra{-1,1,0}{0,0,0} + \frac{1}{2}e^{+i\varphi_{\text{ext}}}\iketbra{0,0,0}{-1,1,0},
+%  \end{equation}
+%  \noindent  which would  be a  pair of  symmetrical off-diagonal  elements in  the matrix  of
+%  Fig.~\ref{fig:matrix_representation}.
+%\end{enumerate}
+
+Physically one before the last term corresponds  to a CP exchange between island 1 and  island 2. An example
   of a term could be
   \begin{equation}
     \label{eq:ab6}
@@ -241,7 +282,6 @@ The capacitance matrix is found from expressing the charges on the 3 different i
   \end{equation}
   \noindent  which would  be a  pair of  symmetrical off-diagonal  elements in  the matrix  of
   Fig.~\ref{fig:matrix_representation}.
-\end{enumerate}
 
 \begin{figure}[h]
   \includegraphics[width=120mm]{fig4}
@@ -250,7 +290,7 @@ The capacitance matrix is found from expressing the charges on the 3 different i
 \end{figure}
 
 
-To decide on the number of states for the simulation, we took a sufficiently complete system state of 19 interacting CPs, and methodically ``switched off'' interactions between the high-CP-number states. I logged the deviation of the energy spectra of Fig.~\ref{fig:minimum_number}, where it shows that 9-CP-states describes the system almost as well as with the complete system state.
+To decide on the number of states for the simulation, we took a sufficiently complete system state of 19 interacting CPs, and methodically ``switched off'' interactions between the high-CP-number states. Further increase, of the number of states does not improve accurate of calculations. We logged the deviation of the energy spectra of Fig.~\ref{fig:minimum_number}, where it shows that 9-CP-states describes the system almost as good as with the complete system state.
 
 \begin{figure}[h]
   \includegraphics[width=86mm]{fig7}
@@ -270,14 +310,14 @@ To decide on the number of states for the simulation, we took a sufficiently com
   Here we derive the transition matrix element used in the main paper
       \begin{equation}
     \label{eq:dipole_voltage_6}
-    \ibra{g}\hat{V}_2 \iket{e} \equiv \frac{E_{C}}{2 \iabs{e} (1+\alpha)}\ibra{g}\left[\hat{n}_1  +  2\hat{n}_{2}
+    \ibra{g}\hat{V}_2 \iket{e} \equiv \frac{E_{C}}{2 e (1+\alpha)}\ibra{g}\left[\hat{n}_1  +  2\hat{n}_{2}
         +\hat{n}_3 \right]\iket{e}.
   \end{equation}
 \end{framed}
 
 Microwaves   in  the  transmission  line,   with  voltage
-$   V_{\text{mw}}=   \iabs{V_{\text{mw}}}\cos(\omega_{21   }t)   $  are   coupled   via   capacitor
-C$_{\text{coupling}}$  to   the  qubit. Transitions \iket{1}~\ilra~\iket{2} stimulated by
+$   V_{\text{mw}}=   \iabs{V_{\text{mw}}}\cos(\omega_{21   }t)   $  are   coupled   via the coupling capacitor
+$C_{\text{c}}$  to   the  qubit. Transitions \iket{1}~\ilra~\iket{2} stimulated by
 this driving  generate a qubit voltage  of $  V_2 = \ibra{1}\hat{V}_2\iket{2} $ 
 
 Expressing the voltage on the different islands:
@@ -306,17 +346,16 @@ Expressing the voltage on the different islands:
 
   \begin{equation}
         \begin{aligned}
-      \hat{V}_2 &  = \frac{e}{\iabs{C}(1+\alpha)}  \left[ \hat{n}_1  + 2\hat{n}_{2}
+      \hat{V}_2 &  = \frac{e}{C(1+\alpha)}  \left[ \hat{n}_1  + 2\hat{n}_{2}
         +\hat{n}_3 \right].
-      
     \end{aligned}
   \end{equation}
   Thus, the transition matrix element
 
     \begin{equation}
     \label{eq:dipole_voltage_6}
-    \ibra{g}\hat{V}_2 \iket{e} \equiv \frac{E_{C}}{2 \iabs{e} (1+\alpha)}\ibra{g}\left[\hat{n}_1  +  2\hat{n}_{2}
-        +\hat{n}_3 \right]\iket{e}.
+    d_{i,j} = \ibra{i}\hat{V}_2 \iket{j} \equiv \frac{E_{C}}{2 e (1+\alpha)}\ibra{i}\left[\hat{n}_1  +  2\hat{n}_{2}
+        +\hat{n}_3 \right]\iket{j}.
   \end{equation}
 
 

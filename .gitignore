@@ -13,3 +13,4 @@ auto
 *.out
 *.gz
 *fdb_latexmk
+*Notes.bib
