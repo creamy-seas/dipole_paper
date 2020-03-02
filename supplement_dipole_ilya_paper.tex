@@ -159,8 +159,8 @@ We are considering a capacitance network of the qubit, shown in Fig. (1). Each J
     \end{pmatrix}
     .
   \end{equation}
-All Josephson junctions except the central one are identical and equal to $C$: $C_{01} = C_{12} = C_{03} = C_{23} = C$. The central junction is different, which together with small coupling capacitance $C_c$ can be represented as $C_{02} + C_c = \alpha' C$. Note that $C_c \ll C$ and $\alpha' \approx \alpha$.    
-The capacitance matrix is simplified to 
+All Josephson junctions except the central one are identical and equal to $C$: $C_{01} = C_{12} = C_{03} = C_{23} = C$. The central junction is different, which together with small coupling capacitance $C_c$ can be represented as $C_{02} + C_c = \alpha' C$. Note that $C_c \ll C$ and $\alpha' \approx \alpha$.
+The capacitance matrix is simplified to
 \begin{framed}\noindent
   \begin{equation}
 \bold{C} =  C \begin{pmatrix}
@@ -179,20 +179,20 @@ The capacitance matrix is simplified to
   \caption{\textbf{Topology of the twin flux qubit.}\label{fig:supp1}}
 \end{figure}
 
-The capacitance matrix couples charges on the islands $2e\vec{n} = 2e\{ n_1, n_2, n_3\}$ with their potentials $\vec{V} = \{ V_1, V_2, V_3\}$ according to $2e\vec{n} = \bold{C} \vec{V}$ and an electrostatic energy of the qubit is simplified to kinetic (phase dynamics) 
+The capacitance matrix couples charges on the islands $2e\vec{n} = 2e\{ n_1, n_2, n_3\}$ with their potentials $\vec{V} = \{ V_1, V_2, V_3\}$ according to $2e\vec{n} = \bold{C} \vec{V}$ and an electrostatic energy of the qubit is simplified to kinetic (phase dynamics)
 \begin{equation}
-T= E_C C \vec{n}^T \bold{C}^{-1} \vec{n}, 
+T= E_C C \vec{n}^T \bold{C}^{-1} \vec{n},
 \end{equation}
-where the charging energy $E_C = \frac{(2e)^2}{2C}$. The potential energy due to Josephson junction is 
+where the charging energy $E_C = \frac{(2e)^2}{2C}$. The potential energy due to Josephson junction is
 \begin{equation}
-U = E_J [4 + \alpha - \alpha \cos{\varphi_2} - \cos{\varphi_1} - \cos{\varphi_3} - \cos{(\varphi_2 - \varphi_1 - \varphi_{ext})} - \cos{(\varphi_2 - \varphi_3 + \eta \varphi_{ext})}].  
+U = E_J [4 + \alpha - \alpha \cos{\varphi_2} - \cos{\varphi_1} - \cos{\varphi_3} - \cos{(\varphi_2 - \varphi_1 - \varphi_{ext})} - \cos{(\varphi_2 - \varphi_3 + \eta \varphi_{ext})}].
 \end{equation}
 
 \section{Representation of Hamiltonian in the charge basis}
 \label{sec:repr-hamilt-charge}
 
-We represent the system Hamiltonian $H=T+U$ in the charge basis.  
-Taking into account the phase operator form $e^{\pm i\varphi} = \ket{n\pm 1}\bra{n}$ and omitting constants in the potential energy, the Hamiltonian is transformed to 
+We represent the system Hamiltonian $H=T+U$ in the charge basis.
+Taking into account the phase operator form $e^{\pm i\varphi} = \ket{n\pm 1}\bra{n}$ and omitting constants in the potential energy, the Hamiltonian is transformed to
 %\begin{eqnarray}
 \begin{align}
 H = E_C C \vec{n}^T &\bold{C}^{-1} \vec{n} -\frac{E_J}{2}\big(\alpha\ket{n_2+1}\bra{n_2}+\ket{n_1+1}\bra{n_1}+ \ket{n_3+1}\bra{n_3} + \nonumber\\
@@ -224,7 +224,7 @@ H = E_C C \vec{n}^T &\bold{C}^{-1} \vec{n} -\frac{E_J}{2}\big(\alpha\ket{n_2+1}\
 %\item Derive  the commutation relation  between the number, $  \hat{n} $, and  the exponential
 %  phase,     $    e^{\pm     i\hat{\varphi}}     $,    by     using     the    standard     relation
 %  $ \left[\hat{n},\hat{\varphi}\right] = 1 $:
-% 
+%
 %  {\scriptsize\begin{equation}\label{eq:ab1}
 %      \begin{aligned}
 %        \icommutation{\hat{\red{n}}}{e^{\pm i \hat{\blue{\varphi}}}} & =  \icommutation{\hat{n}}{\sum_{\alpha = 0}^{\infty} \frac{(\pm i\hat{\blue{\varphi}})^\alpha}{\alpha!}} = \sum_{\alpha = 0}^{\infty} (\pm i)^\alpha\frac{\icommutation{\hat{\red{n}}}{\hat{\blue{\varphi}}^\alpha}}{\alpha!}\\
@@ -248,7 +248,7 @@ H = E_C C \vec{n}^T &\bold{C}^{-1} \vec{n} -\frac{E_J}{2}\big(\alpha\ket{n_2+1}\
 %    \label{eq:ab5}
 %    e^{\pm i\hat{\blue{\varphi}}}\ket{n} = \ket{n \pm 1} \Rightarrow e^{\pm i\blue{\varphi}} = \sum_{{n}} \iketbra{n\pm1}{n}.
 %  \end{equation}
-% 
+%
 %\item Thus  operator $\cos(\hat{\varphi}_2-\hat{\varphi}_1-\hat{\varphi}_{\text{ext}})$ can be  expressed in the
 %  number basis $ \left\{n_{1},n_2,n_3\right\} $ as: {\scriptsize
 %    \begin{equation}
@@ -263,7 +263,7 @@ H = E_C C \vec{n}^T &\bold{C}^{-1} \vec{n} -\frac{E_J}{2}\big(\alpha\ket{n_2+1}\
 %        \iketbra{n_1-1,n_2+1,n_3}{n_1,n_2,n_3} + \text{c.c.}
 %     \end{aligned}
 %    \end{equation}}
-  
+
 %\item Physically this last term corresponds  to a CP exchange between island 1 and  island 2. An example
 %  of a term could be
 %  \begin{equation}
@@ -274,7 +274,7 @@ H = E_C C \vec{n}^T &\bold{C}^{-1} \vec{n} -\frac{E_J}{2}\big(\alpha\ket{n_2+1}\
 %  Fig.~\ref{fig:matrix_representation}.
 %\end{enumerate}
 
-Physically one before the last term corresponds  to a CP exchange between island 1 and  island 2. An example
+Physically the penultimate term corresponds  to a CP exchange between island 1 and  island 2. An example
   of a term could be
   \begin{equation}
     \label{eq:ab6}
@@ -318,7 +318,7 @@ To decide on the number of states for the simulation, we took a sufficiently com
 Microwaves   in  the  transmission  line,   with  voltage
 $   V_{\text{mw}}=   \iabs{V_{\text{mw}}}\cos(\omega_{21   }t)   $  are   coupled   via the coupling capacitor
 $C_{\text{c}}$  to   the  qubit. Transitions \iket{1}~\ilra~\iket{2} stimulated by
-this driving  generate a qubit voltage  of $  V_2 = \ibra{1}\hat{V}_2\iket{2} $ 
+this driving  generate a qubit voltage  of $  V_2 = \ibra{1}\hat{V}_2\iket{2} $
 
 Expressing the voltage on the different islands:
   \begin{equation}
@@ -403,7 +403,7 @@ Expressing the voltage on the different islands:
 
 %   \noindent    under     the    approximation     that    non-conserving     energy    terms
 %   $ e^{\pm 2i\omega_{21}t} $ are neglected.
-  
+
 % \item  The evolution  of  a  ground state  in  this  rotated frame  for  a  drive of  length
 %   $ \Delta t $ is
 %   \begin{equation}
